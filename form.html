@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Kitchen Sink</title>
+
+    <link rel="stylesheet" href="global.css" />
+  </head>
+
+  <body>
+    <div class="center">
+      <form>
+        <label for="username">
+          Username
+          <input
+            id="username"
+            type="text"
+            placeholder="Username"
+            name="username"
+            required
+            bind:value="{username}"
+          />
+        </label>
+        <label for="password">
+          Password
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+            bind:value="{password}"
+          />
+        </label>
+        <button id="submit" type="submit" disabled>
+          Login
+        </button>
+        <button id="submit" type="submit" active>
+          Login Active
+        </button>
+        <button id="submit" type="submit">
+          Login Enabled
+        </button>
+        <button id="submit" type="reset">
+          Reset
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
