@@ -11,7 +11,7 @@
   --button-active-color: #cf89eb;
   --button-hover-color: #451c55;
 
-  --button-primary-color: var(--button-color);
+  --button-primary-color: #6e3e81;
 
   --input-color: #495057;
   --input-background-color: #ecebeb;
@@ -222,6 +222,11 @@ button {
     box-shadow var(--transition-time) ease-in-out;
 }
 
+button[type="submit"] {
+  background-color: var(--button-primary-color);
+  /*font-size: 1.25rem;*/
+}
+
 button:hover {
   outline: 2px;
   background-color: var(--button-hover-color);
@@ -241,9 +246,6 @@ button:active {
 
 button:disabled {
   background-color: #9555af65;
-}
-
-button[class="primary"] {
 }
 
 label {
