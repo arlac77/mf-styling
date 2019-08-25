@@ -248,6 +248,7 @@ button:active {
 
 button:disabled {
   background-color: var(--button-disabled-background-color);
+  pointer-events:none;
 }
 
 label {
@@ -267,6 +268,12 @@ input {
   border-radius: var(--border-radius);
   transition: border-color var(--transition-time) ease-in-out,
     box-shadow var(--transition-time) ease-in-out;
+}
+
+input:disabled {
+  color: #ccc;
+  border: 0 solid #fff;
+  pointer-events:none;
 }
 
 .center {

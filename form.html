@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <h1>Form</h1>
     <div class="center">
       <form>
         <label for="username">
@@ -19,7 +20,6 @@
             placeholder="Username"
             name="username"
             required
-            bind:value="{username}"
           />
         </label>
         <label for="password">
@@ -30,7 +30,6 @@
             placeholder="Password"
             name="password"
             required
-            bind:value="{password}"
           />
         </label>
         <button id="submit" type="submit" disabled>
@@ -47,6 +46,34 @@
           Reset
         </button>
       </form>
+<span></span>
+      <form disabled>
+          <label for="username">
+            Username
+            <input
+              id="username"
+              type="text"
+              placeholder="Username"
+              name="username"
+              required
+              disabled
+              value="XXX"
+            />
+          </label>
+          <label for="password">
+            Password
+            <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+            />
+          </label>
+          <button id="submit" type="submit">
+            Login
+          </button>
+        </form>
     </div>
   </body>
 </html>
