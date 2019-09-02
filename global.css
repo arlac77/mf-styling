@@ -248,7 +248,7 @@ button:active {
 
 button:disabled {
   background-color: var(--button-disabled-background-color);
-  pointer-events:none;
+  pointer-events: none;
 }
 
 label {
@@ -273,7 +273,7 @@ input {
 input:disabled {
   color: #ccc;
   border: 0 solid #fff;
-  pointer-events:none;
+  pointer-events: none;
 }
 
 .center {
@@ -295,14 +295,6 @@ input:disabled {
   margin: 0 0 0 8px;
   padding: 0;
   transition: all 0.2s ease;
-}
-
-.hidden > .spinner {
-  max-width: 0 !important;
-  max-height: 0 !important;
-  border-width: 0 !important;
-  margin: 0;
-  opacity: 0;
 }
 
 @keyframes spin {
@@ -343,4 +335,8 @@ input:disabled {
   padding-right: 0px;
   padding-top: 0px;
   text-align: left;
+}
+
+.error {
+  color: var(--error-color);
 }
