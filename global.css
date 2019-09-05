@@ -251,6 +251,10 @@ button:disabled {
   pointer-events: none;
 }
 
+fieldset {
+  border: 0;
+}
+
 label {
   font-size: 1.1rem;
 }
