@@ -4,6 +4,7 @@
 
   --active-color: rgb(84, 102, 58);
   --error-color: #b00020;
+  --ok-color: #15b000;
 
   --button-color: #9555af;
 
@@ -343,6 +344,10 @@ input:disabled {
 
 .error {
   color: var(--error-color);
+}
+
+.ok {
+  color: var(--ok-color);
 }
 
 .log {
