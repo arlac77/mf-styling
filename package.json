@@ -1,5 +1,6 @@
 {
   "name": "mf-styling",
+  "version": "0.0.0-semantic-release",
   "files": [
     "global.css"
   ]
