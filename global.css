@@ -344,3 +344,8 @@ input:disabled {
 .error {
   color: var(--error-color);
 }
+
+.log {
+  white-space: pre;
+  font-family: courier, "courier new", monospace;
+}
