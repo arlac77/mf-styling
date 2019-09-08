@@ -1,6 +1,7 @@
 :root {
   --transition-time: 0.15s;
   --border-radius: 0.25rem;
+  --nav-height: 46px;
 
   --active-color: rgb(84, 102, 58);
   --error-color: #b00020;
@@ -33,9 +34,12 @@
   --header-background-color: #764abc;
 }
 
-.wrapper {
-  display: grid;
-  grid-gap: 1px;
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
 }
 
 .row {
@@ -50,13 +54,6 @@
   margin-right: 0.5%;
 }
 
-.wrapper>* {
-  color: rgb(0, 0, 0);
-  border-radius: 2px;
-  padding: 5px;
-  margin-bottom: 2px;
-}
-
 .logo {
   max-height: 40px;
   padding: 3px;
@@ -64,6 +61,11 @@
   border-style: none;
   box-sizing: content-box;
   max-width: 100%;
+}
+
+body {
+  display: grid;
+  grid-gap: 1px;
 }
 
 @media (min-width: 880px) {
@@ -78,11 +80,12 @@
 }
 
 nav {
+  padding: 0;
   display: flex;
   flex-flow: nowrap;
   background-color: var(--header-background-color);
   color: #fff;
-  height: 48px;
+  height: var(--nav-height);
 }
 
 nav:after {
@@ -102,15 +105,25 @@ nav ul a {
   color: #aaaaaa;
 }
 
+nav ul.left {
+  float: left;
+}
+
 nav ul a:hover {
   color: #fafafa;
 }
 
 nav ul {
+  margin-top: 0;
   margin-left: auto;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
+  height: var(--nav-height);
+}
+
+nav ul a:active {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 nav li {
@@ -118,7 +131,7 @@ nav li {
   display: flex;
   flex-wrap: nowrap;
   list-style: none;
-  padding: 5px;
+  padding: 0 5px 0 5px;
 }
 
 body {
