@@ -93,16 +93,33 @@ nav:after {
 }
 
 nav a {
+  color: #fafafa;
+  font-size: 1.5em;
+  font-weight: bold;
+
   align-items: center;
   border: 0;
   display: flex;
   flex-flow: row nowrap;
   z-index: 10000;
-  color: #fafafa;
+
+  padding: 0 7px 0 7px;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 nav ul a {
   color: #aaaaaa;
+  font-size: 1.17em;
+  font-weight: bold;
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin: 0 0 0 0;
 }
 
 nav ul.left {
