@@ -331,7 +331,6 @@ input:disabled {
 
 .item-list {
   box-sizing: border-box;
-  color: rgb(51, 68, 85);
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -340,7 +339,8 @@ input:disabled {
 .item {
   background-color: rgb(116, 95, 181);
   box-sizing: border-box;
-  color: rgb(51, 68, 85);
+
+  color: white;
   cursor: default;
   display: flex;
   flex-basis: 40%;
@@ -349,15 +349,14 @@ input:disabled {
   height: 70px;
   line-height: 19px;
   list-style-type: none;
-  margin-bottom: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-top: 4px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
+  margin: 4px 4px 4px 4px;
+  padding: 0 0 0 0;
   text-align: left;
+}
+
+.item a {
+  padding: 16px;
+  color: white;
 }
 
 .error {
@@ -366,6 +365,19 @@ input:disabled {
 
 .ok {
   color: var(--ok-color);
+}
+
+.ok-hint {
+  background-color: var(--ok-color);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 8px;
+  line-height: 16px;
+  width: 8px;
 }
 
 .log {
