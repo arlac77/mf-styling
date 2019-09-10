@@ -395,16 +395,21 @@ input:disabled {
 .dropdown-content {
   background-color: #fff;
   margin: 0;
-  display: none;
+  display: block;
   min-width: 100px;
+  height: 200px;
   overflow-y: auto;
   opacity: 0;
   position: absolute;
+ /*
   left: 0;
   top: 0;
+  */
   z-index: 9999;
+/*
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
+*/
 }
 
 .dropdown-content:focus {

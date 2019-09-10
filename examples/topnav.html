@@ -26,24 +26,26 @@
           <a href="/about">About</a>
         </li>
         <li>
-          <a class="dropdown-trigger" href="#!">Dropdown</a>
-        </li>
-
-        <li>
-          <ul class="dropdown-content">
-            <li>
-              <a href="/">
-                Logout
-              </a>
-            </li>
-            <li>
-              <a href="#!">two</a>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <a href="#!">three</a>
-            </li>
-          </ul>
+          <a
+            id="menu-trigger"
+            class="dropdown-trigger"
+            href="#!"
+            >Dropdown
+            <ul id="menu-content" class="dropdown-content">
+              <li>
+                <a href="/">
+                  Logout
+                </a>
+              </li>
+              <li>
+                <a href="#!">two</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#!">three</a>
+              </li>
+            </ul>
+          </a>
         </li>
       </ul>
     </nav>
@@ -51,7 +53,14 @@
   </body>
 
   <script type="text/javascript">
-    const obj = document.getElementById("node_link");
-    obj.classList.add("active");
+    const t = document.getElementById("menu-trigger");
+
+    function toggle(e) {
+      e.preventDefault();
+      const obj = document.getElementById("menu-content");
+      obj.opacity = 1;
+    }
+
+    t.onclick = toggle;
   </script>
 </html>
