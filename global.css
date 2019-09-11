@@ -469,7 +469,6 @@ body.keyboard-focused .dropdown-content li:focus {
   cursor: pointer;
 }
 
-.dropdown-trigger::after {
-  content: "▼";
-  /* content: "↓⌄˯↓↓⇟⇣⌄↡↧↴⇊⎑˅⬇▼▽"; */
+.dropdown-trigger svg {
+  fill: red;
 }
