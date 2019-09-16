@@ -110,6 +110,15 @@ nav a {
   margin-inline-end: 0;
 }
 
+nav ul {
+  margin-top: 0;
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  height: var(--nav-height);
+}
+
 nav ul a {
   color: #aaaaaa;
   font-size: 1.17em;
@@ -122,25 +131,16 @@ nav ul a {
   margin: 0 0 0 0;
 }
 
-nav ul.left {
-  float: left;
+nav ul a.active {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 nav ul a:hover {
   color: #fafafa;
 }
 
-nav ul {
-  margin-top: 0;
-  margin-left: auto;
-  position: relative;
-  display: flex;
-  flex-wrap: nowrap;
-  height: var(--nav-height);
-}
-
-nav ul a:active {
-  background-color: rgba(0, 0, 0, 0.2);
+nav ul.left {
+  float: left;
 }
 
 nav li {
@@ -165,6 +165,7 @@ a {
   text-decoration: none;
   background-color: transparent;
 }
+
 
 table {
   width: 100%;
