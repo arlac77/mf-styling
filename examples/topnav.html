@@ -28,8 +28,8 @@
       </ul>
       <ul>
         <li>
-          <a id="menu-trigger" class="dropdown-trigger" href="#!"
-            >Dropdown
+          <a id="menu-trigger" class="dropdown-trigger" href="#!">
+            Dropdown
             <svg width="14" height="14" viewBox="0 0 24 24" role="img">
               <path d="M6 7l6 6 6-6 2 2-8 8-8-8z" />
             </svg>
@@ -60,7 +60,7 @@
     function toggle(e) {
       e.preventDefault();
       const obj = document.getElementById("menu-content");
-      obj.opacity = 1;
+      obj.display = obj.display == 'none' ? 'block' : 'none';
     }
 
     t.onclick = toggle;

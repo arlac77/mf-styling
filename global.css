@@ -391,8 +391,8 @@ input:disabled {
   background-color: #fff;
   display: block;
   z-index: 9;
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+  padding: 0;
+  margin: 0;
 }
 
 .dropdown-content:focus {
@@ -400,11 +400,10 @@ input:disabled {
 }
 
 .dropdown-content li {
+  display: block;
   clear: both;
-  /*color: rgba(0, 0, 0, 0.87);*/
   cursor: pointer;
   line-height: 1.5rem;
-  width: 100%;
   text-align: left;
 }
 
@@ -425,10 +424,8 @@ input:disabled {
 .dropdown-content li>a,
 .dropdown-content li>span {
   font-size: 16px;
- /* color: #26a69a;*/
   display: block;
-  /*line-height: 22px;*/
-  padding: 14px 16px;
+  padding: 4px 10px 4px 4px;
 }
 
 .dropdown-content li>span>label {
@@ -459,8 +456,4 @@ body.keyboard-focused .dropdown-content li:focus {
 
 .dropdown-trigger {
   cursor: pointer;
-}
-
-.dropdown-trigger svg {
-  fill: red;
 }
