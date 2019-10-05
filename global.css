@@ -359,6 +359,19 @@ input:disabled {
   color: var(--error-color);
 }
 
+.error-hint {
+  background-color: var(--error-color);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 8px;
+  line-height: 16px;
+  width: 8px;
+}
+
 .ok {
   color: var(--ok-color);
 }
