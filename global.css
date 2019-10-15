@@ -8,6 +8,7 @@
 
   --error-color: #b00020;
   --ok-color: #15b000;
+  --unknwon-color: #7f7f7f;
 
   --button-color: #9555af;
 
@@ -377,6 +378,19 @@ input:disabled {
 
 .ok-hint {
   background-color: var(--ok-color);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 8px;
+  line-height: 16px;
+  width: 8px;
+}
+
+.unknown-hint {
+  background-color: var(--unknown-color);
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-top-left-radius: 50%;
