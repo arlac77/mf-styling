@@ -6,7 +6,6 @@
   --dropdown-border-color: rgba(27, 31, 35, 0.15);
 
   --active-color: rgb(84, 102, 58);
-  --active-background-color: rgba(0, 0, 0, 0.2);
 
   --error-color: #b00020;
   --ok-color: #15b000;
@@ -37,6 +36,10 @@
   --table-padding: 0.75rem;
 
   --header-background-color: #764abc;
+  --nav-primary-color:#fafafa;
+  --nav-secondary-color:#aaaaaa;
+  --nav-active-background-color: rgba(0, 0, 0, 0.2);
+  --nav-active-color: var(--nav-primary-color);
 }
 
 .left {
@@ -96,7 +99,7 @@ nav:after {
 }
 
 nav a {
-  color: #fafafa;
+  color: var(--nav-primary-color);
   font-size: 1.5em;
   font-weight: bold;
 
@@ -111,12 +114,12 @@ nav a {
 }
 
 nav a.active {
-  background-color: var(--active-background-color)
+  color: var(--nav-active-color);
+  background-color: var(--nav-active-background-color)
 }
 
 nav a:hover {
-  color: #fafafa;
-  background-color: var(--active-background-color)
+  background-color: var(--nav-active-background-color)
 }
 
 nav ul {
@@ -134,7 +137,8 @@ nav ul {
 }
 
 nav ul a {
-  color: #aaaaaa;
+  color: var(--nav-secondary-color);
+  fill: currentColor;
   font-size: 1.17em;
   font-weight: bold;
   margin: 0
