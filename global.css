@@ -40,6 +40,8 @@
   --nav-secondary-color:#aaaaaa;
   --nav-active-background-color: rgba(0, 0, 0, 0.2);
   --nav-active-color: var(--nav-primary-color);
+
+  --dropdown-hover-background-color: var(--header-background-color);
 }
 
 .left {
@@ -717,7 +719,7 @@ input:disabled {
 
 .dropdown-item {
   display: block;
-  padding: 4px 8px 4px 16px;
+  padding: 4px 0 2px 8px;
   overflow: hidden;
   color: #24292e;
   text-overflow: ellipsis;
@@ -728,7 +730,7 @@ input:disabled {
 .dropdown-item:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #0366d6;
+  background-color: var(--dropdown-hover-background-color);
   outline: none
 }
 
