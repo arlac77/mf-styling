@@ -9,77 +9,59 @@
   </head>
 
   <body>
-    <h1>Form</h1>
-    <div class="center">
-      <form>
-        <label for="username">
-          Username
-          <input
-            id="username"
-            type="text"
-            placeholder="Username"
-            name="username"
-            required
-          />
-        </label>
-        <label for="password">
-          Password
-          <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            name="password"
-            required
-          />
-        </label>
-        <button id="submit" type="submit" disabled>
-          Login
-        </button>
-        <button id="submit" type="submit" active>
-          Login Active
-          <div class="hidden spinner"></div>
-        </button>
-        <button id="submit" type="submit">
-          Login Enabled
-        </button>
-        <button id="submit" type="reset">
-          Reset
-        </button>
-      </form>
-      <span></span>
-      <form disabled>
-        <label for="username">
-          Username
-          <input
-            id="username"
-            type="text"
-            placeholder="Username"
-            name="username"
-            required
-            disabled
-            value="XXX"
-          />
-        </label>
-        <label for="password">
-          Password
-          <input
-            id="password"
-            type="password"
-            placeholder="Password"
-            name="password"
-            required
-          />
-        </label>
-        <button id="submit" type="submit">
-          Login
-        </button>
-      </form>
-    </div>
-    <div class="center">
-      <form>
-        <fieldset>
+    <nav>
+      <a href="./index.html">MF Styling</a>
+      <ul class="left">
+        <li><a href="./cards.html">Cards</a></li>
+        <li><a href="./table.html">Tables</a></li>
+        <li><a href="./form.html" class="active">Forms</a></li>
+        <li><a href="./other.html">Other</a></li>
+        <li><a href="./items.html">Items</a></li>
+        <li><a href="./topnav.html">Topnav</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Form</h1>
+      <div class="center">
+        <form>
           <label for="username">
-            Username 1
+            Username
+            <input
+              id="username"
+              type="text"
+              placeholder="Username"
+              name="username"
+              required
+            />
+          </label>
+          <label for="password">
+            Password
+            <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              name="password"
+              required
+            />
+          </label>
+          <button id="submit" type="submit" disabled>
+            Login
+          </button>
+          <button id="submit" type="submit" active>
+            Login Active
+            <div class="hidden spinner"></div>
+          </button>
+          <button id="submit" type="submit">
+            Login Enabled
+          </button>
+          <button id="submit" type="reset">
+            Reset
+          </button>
+        </form>
+        <span></span>
+        <form disabled>
+          <label for="username">
+            Username
             <input
               id="username"
               type="text"
@@ -91,7 +73,7 @@
             />
           </label>
           <label for="password">
-            Password 1
+            Password
             <input
               id="password"
               type="password"
@@ -100,36 +82,67 @@
               required
             />
           </label>
-        </fieldset>
-        <fieldset>
-          <label for="username">
-            Username 2
-            <input
-              id="username"
-              type="text"
-              placeholder="Username"
-              name="username"
-              required
-              disabled
-              value="XXX"
-            />
-          </label>
-          <label for="password">
-            Password 2
-            <input
-              id="password"
-              type="password"
-              placeholder="Password"
-              name="password"
-              required
-            />
-          </label>
-        </fieldset>
+          <button id="submit" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+      <div class="center">
+        <form>
+          <fieldset>
+            <label for="username">
+              Username 1
+              <input
+                id="username"
+                type="text"
+                placeholder="Username"
+                name="username"
+                required
+                disabled
+                value="XXX"
+              />
+            </label>
+            <label for="password">
+              Password 1
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                name="password"
+                required
+              />
+            </label>
+          </fieldset>
+          <fieldset>
+            <label for="username">
+              Username 2
+              <input
+                id="username"
+                type="text"
+                placeholder="Username"
+                name="username"
+                required
+                disabled
+                value="XXX"
+              />
+            </label>
+            <label for="password">
+              Password 2
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                name="password"
+                required
+              />
+            </label>
+          </fieldset>
 
-        <button id="submit" type="submit">
-          Login
-        </button>
-      </form>
-    </div>
+          <button id="submit" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
