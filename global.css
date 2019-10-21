@@ -35,13 +35,14 @@
   --table-border-color: #dee2e6;
   --table-padding: 0.75rem;
 
-  --header-background-color: #764abc;
+  --nav-background-color: #764abc;
+  --nav-color: #fff;
   --nav-primary-color:#fafafa;
   --nav-secondary-color:#aaaaaa;
   --nav-active-background-color: rgba(0, 0, 0, 0.2);
   --nav-active-color: var(--nav-primary-color);
 
-  --dropdown-hover-background-color: var(--header-background-color);
+  --dropdown-hover-background-color: var(--nav-background-color);
 }
 
 .left {
@@ -92,8 +93,8 @@ nav {
   padding: 0;
   display: flex;
   flex-flow: nowrap;
-  background-color: var(--header-background-color);
-  color: #fff
+  background-color: var(--nav-background-color);
+  color: var(--nav-color);
 }
 
 nav:after {
