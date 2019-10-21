@@ -1,4 +1,6 @@
 :root {
+  --main-color:#6e3e81;
+
   --transition-time: 0.15s;
   --border-radius: 0.25rem;
   --nav-side-padding: 12px;
@@ -19,7 +21,7 @@
 
   --button-text-color: #fff;
 
-  --button-primary-color: #6e3e81;
+  --button-primary-color: var(--main-color);
 
   --input-color: #495057;
   --input-background-color: #ecebeb;
@@ -35,8 +37,8 @@
   --table-border-color: #dee2e6;
   --table-padding: 0.75rem;
 
-  --nav-background-color: #764abc;
-  --nav-color: #fff;
+  --nav-background-color: var(--main-color);
+  --nav-color: var(--nav-primary-color);
   --nav-primary-color:#fafafa;
   --nav-secondary-color:#aaaaaa;
   --nav-active-background-color: rgba(0, 0, 0, 0.2);
@@ -346,7 +348,7 @@ input:disabled {
 }
 
 .item {
-  background-color: rgb(116, 95, 181);
+  background-color: var(--main-color);
   box-sizing: border-box;
 
   color: white;
