@@ -264,14 +264,7 @@ button:hover {
 }
 
 button:active {
-  filter: saturate(150%);
-
-  padding: 0.5rem 1rem;
-  border-radius: calc(var(--border-radius) * 1.5);
-
-  color: var(--active-color);
   background-color: var(--button-active-color);
-
   cursor: progress
 }
 
@@ -280,8 +273,12 @@ button:disabled {
   pointer-events: none
 }
 
+form {
+  margin: 0.5rem;
+}
+
 fieldset {
-  border: 0
+  border: 0;
 }
 
 label {
@@ -322,10 +319,10 @@ input:disabled {
   border: 3px solid #f3f3f3;
   border-top: 3px solid #15c03a;
   border-radius: 100%;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   animation: spin 1s linear infinite;
-  margin: 0 0 0 8px;
+  margin: 0 0 1px 8px;
   padding: 0;
   transition: all 0.2s ease
 }
