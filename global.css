@@ -1,5 +1,6 @@
 :root {
   --primary-color:#6e3e81;
+  --background-color: #ecebeb;
 
   --transition-time: 0.15s;
   --border-radius: 0.25rem;
@@ -257,6 +258,14 @@ button {
 button[type="submit"] {
   background-color: var(--button-primary-color)
 }
+
+/*
+button:focus {
+  box-shadow:
+    0 0 5px var(--background-color),
+    0 0 10px var(--primary-color)
+}
+*/
 
 button:hover {
   outline: 2px;
