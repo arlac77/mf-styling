@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modal From</title>
+
+    <link rel="stylesheet" href="../global.css" />
+  </head>
+
+  <body>
+    <nav>
+      <a href="./index.html">MF Styling</a>
+      <ul class="left">
+        <li><a href="./cards.html">Cards</a></li>
+        <li><a href="./table.html">Tables</a></li>
+        <li><a href="./form.html">Forms</a></li>
+        <li><a href="./modal.html" class="active">Modal Form</a></li>
+        <li><a href="./other.html">Other</a></li>
+        <li><a href="./topnav.html">Topnav</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="modal center">
+        <form>
+          <fieldset>
+            <label for="username">
+              Username 1
+              <input
+                id="username"
+                type="text"
+                placeholder="Username"
+                name="username"
+                required
+                value="XXX"
+                size="10"
+              />
+            </label>
+            <label for="password">
+              Password 1
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                name="password"
+                size="10"
+                required
+              />
+            </label>
+          </fieldset>
+
+          <button id="submit" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
