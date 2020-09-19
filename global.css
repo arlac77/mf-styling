@@ -4,7 +4,6 @@
 
   --transition-time: 0.15s;
   --border-radius: 0.25rem;
-  --nav-side-padding: 12px;
 
   --dropdown-border-color: rgba(27, 31, 35, 0.15);
 
@@ -15,13 +14,10 @@
   --unknown-color: #7f7f7f;
 
   --button-color: #9555af;
-
   --button-disabled-background-color: #9555af65;
   --button-active-color: #cf89eb;
   --button-hover-color: #451c55;
-
   --button-text-color: #fff;
-
   --button-primary-color: var(--primary-color);
 
   --input-color: #495057;
@@ -44,6 +40,7 @@
   --nav-secondary-color: #aaaaaa;
   --nav-active-background-color: rgba(0, 0, 0, 0.2);
   --nav-active-color: var(--nav-primary-color);
+  --nav-side-padding: 12px;
 
   --dropdown-hover-background-color: var(--nav-background-color);
 }
