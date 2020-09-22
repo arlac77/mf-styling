@@ -1,0 +1,91 @@
+:root {
+  --nav-background-color: var(--primary-color);
+  --nav-primary-color: #fafafa;
+  --nav-secondary-color: #aaaaaa;
+  --nav-color: var(--nav-primary-color);
+  --nav-active-background-color: rgba(0, 0, 0, 0.2);
+  --nav-active-color: var(--nav-primary-color);
+  --nav-side-padding: 12px;
+}
+
+@media (min-width: 880px) {
+  nav {
+    grid-column: 1 / 10;
+  }
+
+  main {
+    grid-column: 1 / 10;
+    grid-row: 2 / 3;
+  }
+}
+
+nav {
+  padding: 0;
+  display: flex;
+  flex-flow: nowrap;
+  background-color: var(--nav-background-color);
+  color: var(--nav-color);
+}
+
+nav:after {
+  clear: both;
+}
+
+nav a {
+  color: var(--nav-primary-color);
+  font-size: 1.5em;
+  font-weight: bold;
+
+  align-items: center;
+  border: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  z-index: 99;
+
+  padding: 0 6px 0 6px;
+  margin: 0;
+}
+
+nav a.active {
+  color: var(--nav-active-color);
+  background-color: var(--nav-active-background-color);
+}
+
+nav a:focus:hover {
+  background-color: var(--nav-active-background-color);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+
+  margin-top: 0;
+  margin-left: auto;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: var(--nav-side-padding);
+}
+
+nav ul a {
+  color: var(--nav-secondary-color);
+  fill: currentColor;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav ul.left {
+  margin-left: 0;
+  padding-inline-start: var(--nav-side-padding);
+}
+
+nav li {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+}
