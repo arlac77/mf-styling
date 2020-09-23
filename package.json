@@ -2,6 +2,11 @@
   "name": "mf-styling",
   "version": "0.0.0-semantic-release",
   "files": [
-    "global.css"
+    "button.css",
+    "card.css",
+    "dropdown.css",
+    "global.css",
+    "nav.css",
+    "table.css"
   ]
 }
