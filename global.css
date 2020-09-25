@@ -10,16 +10,6 @@
   --error-color: #b00020;
   --ok-color: #15b000;
   --unknown-color: #7f7f7f;
-
-  --input-color: #495057;
-  --input-background-color: #ecebeb;
-  --input-border-color: #ced4da;
-
-  --input-background-hover: #ebebeb;
-  --input-background-focus: #e7e4e4;
-  --input-placeholder: #696969;
-  --input-outline: grey;
-  --input-outline-hover: var(--input-outline);
 }
 
 .left {
@@ -67,39 +57,6 @@ a {
   background-color: transparent;
 }
 
-form {
-  margin: 0.5rem;
-}
-
-fieldset {
-  border: 0;
-}
-
-label {
-  font-size: 1.1rem;
-}
-
-input {
-  display: block;
-  height: calc(1.25em + 0.75rem + 2px);
-  margin-bottom: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 1rem;
-  color: var(--input-color);
-  background-color: var(--input-background-color);
-  background-clip: padding-box;
-  border: 1px solid var(--input-border-color);
-  border-radius: var(--border-radius);
-  transition: border-color var(--transition-time) ease-in-out,
-    box-shadow var(--transition-time) ease-in-out;
-}
-
-input:disabled {
-  color: #ccc;
-  border: 0 solid #fff;
-  pointer-events: none;
-}
-
 .center {
   display: flex;
   align-items: center;
@@ -110,7 +67,7 @@ input:disabled {
   box-shadow: darkgrey;
   background-color: white;
   border: 2px solid lightgray;
-  border-radius: 0.5rem;;
+  border-radius: 0.5rem;
   box-shadow: 12px 12px rgba(0.9, 0.9, 0.9, 0.1);
   padding: 0.5rem;
 }
@@ -202,4 +159,3 @@ input:disabled {
   white-space: pre;
   font-family: courier, "courier new", monospace;
 }
-
