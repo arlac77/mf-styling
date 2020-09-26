@@ -1,5 +1,6 @@
 {
   "name": "mf-styling",
+  "description": "styling for mf webapps",
   "version": "0.0.0-semantic-release",
   "files": [
     "button.css",
