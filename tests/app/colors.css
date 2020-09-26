@@ -1,0 +1,32 @@
+:root {
+  --primary-colorR: #6e;
+  --primary-colorG: #3e;
+  --primary-colorB: #81;
+
+  --primary-color: #6e3e81;
+}
+
+div {
+  display: block;
+}
+
+.c0 {
+  background-color: rgba(var(--primary-colorR),2,3
+  );
+}
+.c1 {
+  background-color: rgba(
+    var(--primary-colorR),
+    var(--primary-colorG),
+    var(--primary-colorB),
+    0.2
+  );
+}
+.c2 {
+  background-color: rgba(
+    var(--primary-colorR),
+    var(--primary-colorG),
+    var(--primary-colorB),
+    0.9
+  );
+}
