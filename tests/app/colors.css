@@ -1,5 +1,5 @@
 :root {
-  --primary-color: 127, 0, 3;
+  --primary-color: 110, 62, 129;
 }
 
 div {
@@ -7,37 +7,37 @@ div {
 }
 
 .c1 {
-  background-color: rgba(var(--primary-color),0.1);
+  background-color: rgba(var(--primary-color), 0.1);
 }
 
 .c2 {
-  background-color: rgba(var(--primary-color),0.2);
+  background-color: rgba(var(--primary-color), 0.2);
 }
 
 .c3 {
-  background-color: rgba(var(--primary-color),0.3);
+  background-color: rgba(var(--primary-color), 0.3);
 }
 
 .c4 {
-  background-color: rgba(var(--primary-color),0.4);
+  background-color: rgba(var(--primary-color), 0.4);
 }
 
 .c5 {
-  background-color: rgba(var(--primary-color),0.5);
+  background-color: rgba(var(--primary-color), 0.5);
 }
 
 .c6 {
-  background-color: rgba(var(--primary-color),0.6);
+  background-color: rgba(var(--primary-color), 0.6);
 }
 
 .c7 {
-  background-color: rgba(var(--primary-color),0.7);
+  background-color: rgba(var(--primary-color), 0.7);
 }
 
 .c8 {
-  background-color: rgba(var(--primary-color),0.8);
+  background-color: rgba(var(--primary-color), 0.8);
 }
 
 .c9 {
-  background-color: rgba(var(--primary-color),0.9);
+  background-color: rgba(var(--primary-color), 0.9);
 }
