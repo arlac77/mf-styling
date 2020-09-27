@@ -1,23 +1,43 @@
 :root {
-  --primary-colorR: #6e;
-  --primary-colorG: #3e;
-  --primary-colorB: #81;
-
-  --primary-color: #6e, #3e, #81;
+  --primary-color: 127, 0, 3;
 }
 
 div {
   display: block;
 }
 
-.c0 {
-  background-color: rgba(var(--primary-color),0.2);
-}
-
 .c1 {
-  background-color: rgba(var(--primary-color),0.3);
+  background-color: rgba(var(--primary-color),0.1);
 }
 
 .c2 {
+  background-color: rgba(var(--primary-color),0.2);
+}
+
+.c3 {
+  background-color: rgba(var(--primary-color),0.3);
+}
+
+.c4 {
+  background-color: rgba(var(--primary-color),0.4);
+}
+
+.c5 {
+  background-color: rgba(var(--primary-color),0.5);
+}
+
+.c6 {
+  background-color: rgba(var(--primary-color),0.6);
+}
+
+.c7 {
+  background-color: rgba(var(--primary-color),0.7);
+}
+
+.c8 {
   background-color: rgba(var(--primary-color),0.8);
+}
+
+.c9 {
+  background-color: rgba(var(--primary-color),0.9);
 }
