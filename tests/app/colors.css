@@ -3,7 +3,7 @@
   --primary-colorG: #3e;
   --primary-colorB: #81;
 
-  --primary-color: #6e3e81;
+  --primary-color: #6e, #3e, #81;
 }
 
 div {
@@ -11,22 +11,13 @@ div {
 }
 
 .c0 {
-  background-color: rgba(var(--primary-colorR),2,3
-  );
+  background-color: rgba(var(--primary-color),0.2);
 }
+
 .c1 {
-  background-color: rgba(
-    var(--primary-colorR),
-    var(--primary-colorG),
-    var(--primary-colorB),
-    0.2
-  );
+  background-color: rgba(var(--primary-color),0.3);
 }
+
 .c2 {
-  background-color: rgba(
-    var(--primary-colorR),
-    var(--primary-colorG),
-    var(--primary-colorB),
-    0.9
-  );
+  background-color: rgba(var(--primary-color),0.8);
 }
