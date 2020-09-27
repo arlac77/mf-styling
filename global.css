@@ -1,5 +1,7 @@
 :root {
-  --primary-color: #6e3e81;
+  --primary-color-rgb: 110, 62, 129;
+  --primary-color: rgb(var(--primary-color-rgb));
+  
   --background-color: #ecebeb;
 
   --transition-time: 0.15s;
