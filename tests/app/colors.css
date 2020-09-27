@@ -1,43 +1,48 @@
 :root {
   --primary-color: 110, 62, 129;
+
+  --button-color: 149, 85, 175;
+  --button-active-color: 207, 137, 235;
+  --button-hover-color: 69, 28, 85;
+  --button-disabled-background-color: 149, 85, 175, 101;
 }
 
 div {
   display: block;
 }
 
-.c1 {
+.pc1 {
   background-color: rgba(var(--primary-color), 0.1);
 }
 
-.c2 {
+.pc2 {
   background-color: rgba(var(--primary-color), 0.2);
 }
 
-.c3 {
+.pc3 {
   background-color: rgba(var(--primary-color), 0.3);
 }
 
-.c4 {
+.pc4 {
   background-color: rgba(var(--primary-color), 0.4);
 }
 
-.c5 {
+.pc5 {
   background-color: rgba(var(--primary-color), 0.5);
 }
 
-.c6 {
+.pc6 {
   background-color: rgba(var(--primary-color), 0.6);
 }
 
-.c7 {
+.pc7 {
   background-color: rgba(var(--primary-color), 0.7);
 }
 
-.c8 {
+.pc8 {
   background-color: rgba(var(--primary-color), 0.8);
 }
 
-.c9 {
+.pc9 {
   background-color: rgba(var(--primary-color), 0.9);
 }
