@@ -10,15 +10,11 @@
 button {
   text-align: center;
   text-decoration: none;
-
   margin: 2px 0;
-
   border: solid 1px transparent;
   border-radius: var(--border-radius);
-
   color: var(--button-text-color);
   background-color: var(--button-color);
-
   font-weight: 400;
   text-align: center;
   vertical-align: middle;

@@ -1,14 +1,10 @@
 :root {
   --primary-color-rgb: 110, 62, 129;
   --primary-color: rgb(var(--primary-color-rgb));
-  
   --background-color: #ecebeb;
-
   --transition-time: 0.15s;
   --border-radius: 0.25rem;
-
   --active-color: rgb(84, 102, 58);
-
   --error-color: #b00020;
   --ok-color: #15b000;
   --unknown-color: #7f7f7f;
