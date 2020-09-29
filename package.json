@@ -12,7 +12,7 @@
     "form.css"
   ],
   "scripts": {
-    "lint": "stylelint *.css"
+    "lint:css": "stylelint *.css"
   },
   "devDependencies": {
     "stylelint": "^13.7.2",
