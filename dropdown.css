@@ -37,19 +37,19 @@
   box-shadow: 0 1px 15px var(--dropdown-border-color);
 }
 
-.dropdown-menu:after,
-.dropdown-menu:before {
+.dropdown-menu ::after,
+.dropdown-menu ::before {
   position: absolute;
   display: inline-block;
   content: "";
 }
 
-.dropdown-menu:before {
+.dropdown-menu ::before {
   border: 8px solid transparent;
   border-bottom-color: var(--dropdown-border-color);
 }
 
-.dropdown-menu:after {
+.dropdown-menu ::after {
   border: 7px solid transparent;
   border-bottom-color: #fff;
 }
@@ -110,7 +110,7 @@
 .dropdown-header {
   padding: 4px 16px;
   font-size: 12px;
-  color: #586069;
+  color: #d1d5da;
 }
 
 .dropdown-menu-w {
@@ -122,14 +122,14 @@
   margin-right: 8px;
 }
 
-.dropdown-menu-w:before {
+.dropdown-menu-w ::before {
   top: 10px;
   right: -16px;
   left: auto;
   border-color: transparent transparent transparent var(--dropdown-border-color);
 }
 
-.dropdown-menu-w:after {
+.dropdown-menu-w ::after {
   top: 11px;
   right: -14px;
   left: auto;
@@ -144,13 +144,13 @@
   margin-left: 8px;
 }
 
-.dropdown-menu-e:before {
+.dropdown-menu-e ::before {
   top: 8px;
   left: -16px;
   border-color: transparent var(--dropdown-border-color) transparent transparent;
 }
 
-.dropdown-menu-e:after {
+.dropdown-menu-e ::after {
   top: 11px;
   left: -14px;
   border-color: transparent #fff transparent transparent;
@@ -163,13 +163,13 @@
   margin-bottom: 3px;
 }
 
-.dropdown-menu-ne:after,
-.dropdown-menu-ne:before {
+.dropdown-menu-ne ::after,
+.dropdown-menu-ne ::before {
   top: auto;
   right: auto;
 }
 
-.dropdown-menu-ne:before {
+.dropdown-menu-ne ::before {
   bottom: -8px;
   left: 9px;
   border-top: 8px solid var(--dropdown-border-color);
@@ -178,7 +178,7 @@
   border-left: 8px solid transparent;
 }
 
-.dropdown-menu-ne:after {
+.dropdown-menu-ne ::after {
   bottom: -7px;
   left: 10px;
   border-top: 7px solid #fff;
@@ -193,13 +193,13 @@
   transform: translateX(50%);
 }
 
-.dropdown-menu-s:before {
+.dropdown-menu-s ::before {
   top: -16px;
   right: 50%;
   transform: translateX(50%);
 }
 
-.dropdown-menu-s:after {
+.dropdown-menu-s ::after {
   top: -14px;
   right: 50%;
   transform: translateX(50%);
@@ -210,28 +210,24 @@
   left: auto;
 }
 
-.dropdown-menu-sw:before {
+.dropdown-menu-sw ::before {
   top: -16px;
   right: 9px;
   left: auto;
 }
 
-.dropdown-menu-sw:after {
+.dropdown-menu-sw ::after {
   top: -14px;
   right: 10px;
   left: auto;
 }
 
-.dropdown-menu-se:before {
+.dropdown-menu-se ::before {
   top: -16px;
   left: 9px;
 }
 
-.dropdown-menu-se:after {
+.dropdown-menu-se ::after {
   top: -14px;
   left: 10px;
-}
-
-.dropdown-header {
-  color: #d1d5da;
 }

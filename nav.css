@@ -27,7 +27,7 @@ nav {
   color: var(--nav-color);
 }
 
-nav:after {
+nav ::after {
   clear: both;
 }
 
