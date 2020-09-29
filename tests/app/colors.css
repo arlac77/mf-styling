@@ -7,6 +7,19 @@
   --button-disabled-background-color: 149, 85, 175, 101;
 }
 
+/*
+indigo	50	#f0f5ff	0.85	0.911	0.93	true
+indigo	100	#e5edff	0.75	0.844	0.82	false
+indigo	200	#cddbfe	0.5	0.708	0.65	false
+indigo	300	#b4c6fc	0.35	0.571	0.45	false
+indigo	400	#8da2fb	0.25	0.385	0.3	false
+indigo	500	#6875f5	0.175	0.223	0.183	false
+indigo	600	#5850ec	0.1	0.139	0.125	false
+indigo	700	#5145cd	0.05	0.104	0.07	false
+indigo	800	#42389d	0.02	0.064	0.04	false
+indigo	900	#362f78	0.005	0.042	0.015	false
+*/
+
 div {
   display: block;
 }
