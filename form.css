@@ -32,7 +32,8 @@ input {
   background-clip: padding-box;
   border: 1px solid var(--input-border-color);
   border-radius: var(--border-radius);
-  transition: border-color var(--transition-time) ease-in-out,
+  transition:
+    border-color var(--transition-time) ease-in-out,
     box-shadow var(--transition-time) ease-in-out;
 }
 

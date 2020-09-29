@@ -62,7 +62,6 @@ a {
 }
 
 .window {
-  box-shadow: darkgrey;
   background-color: white;
   border: 2px solid lightgray;
   border-radius: 0.5rem;

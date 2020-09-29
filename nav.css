@@ -1,7 +1,7 @@
 :root {
   --nav-background-color: var(--primary-color);
   --nav-primary-color: #fafafa;
-  --nav-secondary-color: #aaaaaa;
+  --nav-secondary-color: #aaa;
   --nav-color: var(--nav-primary-color);
   --nav-active-background-color: rgba(0, 0, 0, 0.2);
   --nav-active-color: var(--nav-primary-color);
