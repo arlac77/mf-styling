@@ -1,21 +1,33 @@
 {
   "name": "mf-styling",
-  "description": "styling for mf webapps",
   "version": "0.0.0-semantic-release",
   "files": [
     "button.css",
     "card.css",
     "dropdown.css",
+    "form.css",
     "global.css",
     "nav.css",
-    "table.css",
-    "form.css"
+    "table.css"
   ],
+  "description": "styling for mf webapps",
   "scripts": {
-    "lint:css": "stylelint *.css"
+    "lint:css": "stylelint *.css",
+    "lint": "npm run lint:css"
   },
   "devDependencies": {
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arlac77/mf-styling.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arlac77/mf-styling/issues"
+  },
+  "homepage": "https://github.com/arlac77/mf-styling#readme",
+  "template": {
+    "inheritFrom": "arlac77/template-css"
   }
 }
