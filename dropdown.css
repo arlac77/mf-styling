@@ -62,12 +62,6 @@
   width: auto;
 }
 
-.dropdown-menu-no-overflow .dropdown-item {
-  padding: 4px 16px;
-  overflow: visible;
-  text-overflow: inherit;
-}
-
 .dropdown-item {
   display: block;
   padding: 4px 0 2px 8px;
@@ -75,6 +69,12 @@
   color: #24292e;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.dropdown-menu-no-overflow .dropdown-item {
+  padding: 4px 16px;
+  overflow: visible;
+  text-overflow: inherit;
 }
 
 .dropdown-item:focus,
