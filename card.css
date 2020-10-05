@@ -119,11 +119,11 @@
 }
 
 .card.sticky-action .card-action {
-  z-index: 2;
+ /* z-index: 2;*/
 }
 
 .card.sticky-action .card-reveal {
-  z-index: 1;
+  /*z-index: 1;*/
   padding-bottom: 64px;
 }
 
@@ -197,7 +197,7 @@
   left: 0;
   top: 100%;
   height: 100%;
-  z-index: 3;
+ /* z-index: 3;*/
   display: none;
 }
 
