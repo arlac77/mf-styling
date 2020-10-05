@@ -1,8 +1,32 @@
 :root {
+  /*
   --button-color: #9555af;
   --button-disabled-background-color: #9555af65;
   --button-active-color: #cf89eb;
   --button-hover-color: #451c55;
+  --button-color-rgb: 149, 85, 175;
+  --button-active-color-rbg: 207, 137, 235;
+  --button-hover-color-rgb: 69, 28, 85;
+  */
+  --button-color-ratio: 0.74;
+  --button-color-active-ratio: 1.35;
+  --button-color-hover-ratio: 0.55;
+  --button-color-rgb:
+    calc(var(--primary-color-r) * var(--button-color-ratio)),
+    calc(var(--primary-color-g) * var(--button-color-ratio)),
+    calc(var(--primary-color-b) * var(--button-color-ratio));
+  --button-active-color-rbg:
+    calc(var(--primary-color-r) * var(--button-color-active-ratio)),
+    calc(var(--primary-color-g) * var(--button-color-active-ratio)),
+    calc(var(--primary-color-b) * var(--button-color-active-ratio));
+  --button-hover-color-rgb:
+    calc(var(--primary-color-r) * var(--button-color-hover-ratio)),
+    calc(var(--primary-color-g) * var(--button-color-hover-ratio)),
+    calc(var(--primary-color-b) * var(--button-color-hover-ratio));
+  --button-color: rgb(var(--button-color-rgb));
+  --button-active-color: rgb(var(--button-active-color-rbg));
+  --button-hover-color: rgb(var(--button-hover-color-rgb));
+  --button-disabled-background-color: rgba(var(--button-color-rgb), 101);
   --button-text-color: #fff;
   --button-primary-color: var(--primary-color);
 }
