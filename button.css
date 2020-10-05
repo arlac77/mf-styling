@@ -66,7 +66,7 @@ button:disabled {
   animation: spin 1s linear infinite;
   margin: 0 0 1px 8px;
   padding: 0;
-  transition: all 0.2s ease;
+  transition: all var(--transition-time) ease;
 }
 
 @keyframes spin {
@@ -78,4 +78,3 @@ button:disabled {
     transform: rotate(360deg);
   }
 }
-
