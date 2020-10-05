@@ -53,3 +53,29 @@ button:disabled {
   background-color: var(--button-disabled-background-color);
   pointer-events: none;
 }
+
+.spinner {
+  opacity: 1;
+  display: inline-block;
+  vertical-align: middle;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #15c03a;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  animation: spin 1s linear infinite;
+  margin: 0 0 1px 8px;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
