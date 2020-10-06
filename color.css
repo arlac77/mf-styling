@@ -1,0 +1,27 @@
+:root {
+  --xcolor-indigo-900: #362f78;
+  --color-indigo-50: #f0f5ff;
+  --color-indigo-100: #e5edff;
+  --color-indigo-200: #cddbfe;
+  --color-indigo-300: #b4c6fc;
+  --color-indigo-400: #8da2fb;
+  --color-indigo-500: #6875f5;
+  --color-indigo-600: #5850ec;
+  --color-indigo-700: #5145cd;
+  --color-indigo-800: #42389d;
+  --color-indigo-900-r: 54;
+  --color-indigo-900-g: 47;
+  --color-indigo-900-b: 120;
+  --color-indigo-900: rgb(
+    var(--color-indigo-900-r),
+    var(--color-indigo-900-g),
+    var(--color-indigo-900-b)
+  );
+  --primary-color-palette: 'indigo';
+  --primary-color-intensity: 700;
+  --primary-color: var(--color-/*,*/var(--primary-color-palette)/*,*/var(--primary-color-intensity));
+}
+
+.bg-pc {
+  background-color: #5850ec;
+}

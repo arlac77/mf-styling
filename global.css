@@ -2,7 +2,10 @@
   --primary-color-r: 110;
   --primary-color-g: 62;
   --primary-color-b: 129;
-  --primary-color-rgb: var(--primary-color-r), var(--primary-color-g), var(--primary-color-b);
+  --primary-color-rgb:
+    var(--primary-color-r),
+    var(--primary-color-g),
+    var(--primary-color-b);
   --primary-color: rgb(var(--primary-color-rgb));
   --background-color: #ecebeb;
   --transition-time: 0.15s;

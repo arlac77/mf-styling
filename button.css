@@ -28,7 +28,6 @@
   --button-hover-color: rgb(var(--button-hover-color-rgb));
   --button-disabled-background-color: rgba(var(--button-color-rgb), 101);
   --button-text-color: #fff;
-  --button-primary-color: var(--primary-color);
 }
 
 button {
@@ -52,7 +51,7 @@ button {
 }
 
 button[type="submit"] {
-  background-color: var(--button-primary-color);
+  background-color: var(--primary-color);
 }
 
 /*
