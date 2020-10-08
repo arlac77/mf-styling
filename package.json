@@ -2,9 +2,9 @@
   "name": "mf-styling",
   "version": "0.0.0-semantic-release",
   "files": [
-    "color.css",
     "button.css",
     "card.css",
+    "color.css",
     "dropdown.css",
     "form.css",
     "global.css",
