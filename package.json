@@ -16,6 +16,9 @@
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:css"
   },
+  "dependencies": {
+    "modern-normalize": "^1.0.0"
+  },
   "devDependencies": {
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0"
@@ -30,8 +33,5 @@
   "homepage": "https://github.com/arlac77/mf-styling#readme",
   "template": {
     "inheritFrom": "arlac77/template-css"
-  },
-  "dependencies": {
-    "modern-normalize": "^1.0.0"
   }
 }
