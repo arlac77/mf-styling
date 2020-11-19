@@ -4,6 +4,17 @@
   --button-active-color: 207, 137, 235;
   --button-hover-color: 69, 28, 85;
   --button-disabled-background-color: 149, 85, 175, 101;
+
+  --blueGray-50: #f8fafc;
+  --blueGray-100: #f1f5f9;
+  --blueGray-200: #e2e8f0;
+  --blueGray-300: #cbd5e1;
+  --blueGray-400: #94a3b8;
+  --blueGray-500: #64748b;
+  --blueGray-600: #475569;
+  --blueGray-700: #334155;
+  --blueGray-800: #1e293b;
+  --blueGray-900: #0f172a;
 }
 
 /*
@@ -23,38 +34,48 @@ div {
   display: block;
 }
 
+.pc0 {
+  color: var(--blueGray-50);
+  background-color: var(--blueGray-50);
+}
+
 .pc1 {
-  background-color: rgba(var(--primary-color), 0.1);
+  background-color: var(--blueGray-100);
 }
 
 .pc2 {
-  background-color: rgba(var(--primary-color), 0.2);
+  background-color: var(--blueGray-200);
 }
 
 .pc3 {
-  background-color: rgba(var(--primary-color), 0.3);
+  background-color: var(--blueGray-300);
 }
 
 .pc4 {
-  background-color: rgba(var(--primary-color), 0.4);
+  background-color: var(--blueGray-400);
 }
 
 .pc5 {
-  background-color: rgba(var(--primary-color), 0.5);
+  background-color: var(--blueGray-500);
 }
 
 .pc6 {
-  background-color: rgba(var(--primary-color), 0.6);
+  background-color: var(--blueGray-600);
 }
 
 .pc7 {
-  background-color: rgba(var(--primary-color), 0.7);
+  background-color: var(--blueGray-700);
 }
 
 .pc8 {
-  background-color: rgba(var(--primary-color), 0.8);
+  border-color: var(--blueGray-700);
+  display: block;
+  color: var(--blueGray-800);
+  background-color: var(--blueGray-800);
 }
 
 .pc9 {
-  background-color: rgba(var(--primary-color), 0.9);
+  display: block;
+  color: var(--blueGray-900);
+  background-color: var(--blueGray-900);
 }
