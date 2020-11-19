@@ -35,7 +35,6 @@ div {
 }
 
 .pc0 {
-  color: var(--blueGray-50);
   background-color: var(--blueGray-50);
 }
 
@@ -68,14 +67,9 @@ div {
 }
 
 .pc8 {
-  border-color: var(--blueGray-700);
-  display: block;
-  color: var(--blueGray-800);
   background-color: var(--blueGray-800);
 }
 
 .pc9 {
-  display: block;
-  color: var(--blueGray-900);
   background-color: var(--blueGray-900);
 }
