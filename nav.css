@@ -1,10 +1,4 @@
 :root {
-  --nav-background-color: var(--primary-color);
-  --nav-primary-color: #fafafa;
-  --nav-secondary-color: #aaa;
-  --nav-color: var(--nav-primary-color);
-  --nav-active-background-color: rgba(0, 0, 0, 0.2);
-  --nav-active-color: var(--nav-primary-color);
   --nav-side-padding: 12px;
   --nav-height: 42px;
 }
@@ -41,8 +35,8 @@ nav {
   padding: 0;
   display: flex;
   flex-flow: nowrap;
-  background-color: var(--nav-background-color);
-  color: var(--nav-color);
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-100);
 }
 
 nav ::after {
@@ -50,7 +44,7 @@ nav ::after {
 }
 
 nav a {
-  color: var(--nav-primary-color);
+  color: var(--color-neutral-100);
   font-size: 1.5em;
   font-weight: bold;
   align-items: center;
@@ -62,7 +56,7 @@ nav a {
 }
 
 nav ul a {
-  color: var(--nav-secondary-color);
+  color: var(--color-neutral-400);
   fill: currentColor;
   font-size: 1.17em;
   font-weight: bold;
@@ -70,12 +64,12 @@ nav ul a {
 }
 
 nav a.active {
-  color: var(--nav-active-color);
-  background-color: var(--nav-active-background-color);
+  color: var(--color-neutral-100);
+  background-color: var(--color-primary-700);
 }
 
 nav a:focus:hover {
-  background-color: var(--nav-active-background-color);
+  background-color: var(--color-primary-700);
 }
 
 nav ul {

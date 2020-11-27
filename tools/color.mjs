@@ -271,7 +271,7 @@ for (const [k, v] of Object.entries(colors)) {
   if (typeof v == "string") {
   } else {
     for (const [level, value] of Object.entries(v)) {
-      console.log(`--${k}-${level}: ${value};`);
+      console.log(`--color-${k}-${level}: ${value};`);
     }
   }
 }

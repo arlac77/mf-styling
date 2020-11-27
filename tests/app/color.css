@@ -1,75 +1,44 @@
-:root {
-  --primary-color: 110, 62, 129;
-  --button-color: 149, 85, 175;
-  --button-active-color: 207, 137, 235;
-  --button-hover-color: 69, 28, 85;
-  --button-disabled-background-color: 149, 85, 175, 101;
-
-  --blueGray-50: #f8fafc;
-  --blueGray-100: #f1f5f9;
-  --blueGray-200: #e2e8f0;
-  --blueGray-300: #cbd5e1;
-  --blueGray-400: #94a3b8;
-  --blueGray-500: #64748b;
-  --blueGray-600: #475569;
-  --blueGray-700: #334155;
-  --blueGray-800: #1e293b;
-  --blueGray-900: #0f172a;
-}
-
-/*
-indigo	50	#f0f5ff	0.85	0.911	0.93	true
-indigo	100	#e5edff	0.75	0.844	0.82	false
-indigo	200	#cddbfe	0.5	0.708	0.65	false
-indigo	300	#b4c6fc	0.35	0.571	0.45	false
-indigo	400	#8da2fb	0.25	0.385	0.3	false
-indigo	500	#6875f5	0.175	0.223	0.183	false
-indigo	600	#5850ec	0.1	0.139	0.125	false
-indigo	700	#5145cd	0.05	0.104	0.07	false
-indigo	800	#42389d	0.02	0.064	0.04	false
-indigo	900	#362f78	0.005	0.042	0.015	false
-*/
 
 div {
   display: block;
 }
 
 .pc0 {
-  background-color: var(--blueGray-50);
+  background-color: var(--color-primary-50);
 }
 
 .pc1 {
-  background-color: var(--blueGray-100);
+  background-color: var(--color-primary-100);
 }
 
 .pc2 {
-  background-color: var(--blueGray-200);
+  background-color: var(--color-primary-200);
 }
 
 .pc3 {
-  background-color: var(--blueGray-300);
+  background-color: var(--color-primary-300);
 }
 
 .pc4 {
-  background-color: var(--blueGray-400);
+  background-color: var(--color-primary-400);
 }
 
 .pc5 {
-  background-color: var(--blueGray-500);
+  background-color: var(--color-primary-500);
 }
 
 .pc6 {
-  background-color: var(--blueGray-600);
+  background-color: var(--color-primary-600);
 }
 
 .pc7 {
-  background-color: var(--blueGray-700);
+  background-color: var(--color-primary-700);
 }
 
 .pc8 {
-  background-color: var(--blueGray-800);
+  background-color: var(--color-primary-800);
 }
 
 .pc9 {
-  background-color: var(--blueGray-900);
+  background-color: var(--color-primary-900);
 }
