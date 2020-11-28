@@ -35,7 +35,7 @@ nav {
   padding: 0;
   display: flex;
   flex-flow: nowrap;
-  background-color: var(--color-primary-600);
+  background-color: var(--color-primary-700);
   color: var(--color-neutral-100);
 }
 
@@ -65,11 +65,11 @@ nav ul a {
 
 nav a.active {
   color: var(--color-neutral-100);
-  background-color: var(--color-primary-700);
+  background-color: var(--color-primary-800);
 }
 
 nav a:focus:hover {
-  background-color: var(--color-primary-700);
+  background-color: var(--color-primary-800);
 }
 
 nav ul {
