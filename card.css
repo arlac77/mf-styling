@@ -12,13 +12,13 @@
   padding: 24px;
   margin: 0.5rem 0 1rem 0;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: var(--color-neutral-50);
 }
 
 .card {
   position: relative;
   margin: 0.5rem 0 1rem 0;
-  background-color: #fff;
+  background-color: var(--color-neutral-100);
   transition: box-shadow 0.25s;
   border-radius: 2px;
 }
@@ -138,7 +138,7 @@
 }
 
 .card .card-image .card-title {
-  color: #fff;
+  color: var(--color-neutra-500);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -170,7 +170,7 @@
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   position: relative;
   padding: 16px 24px;
-  color: #ffab40;
+  color: var(--color-accent-400);
   margin-right: 24px;
   transition: color 0.3s ease;
   text-transform: uppercase;

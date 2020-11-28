@@ -3,21 +3,8 @@
 */
 
 :root {
-  --primary-color-r: 110;
-  --primary-color-g: 62;
-  --primary-color-b: 129;
-  --primary-color-rgb:
-    var(--primary-color-r),
-    var(--primary-color-g),
-    var(--primary-color-b);
-  --primary-color: rgb(var(--primary-color-rgb));
-  --background-color: #ecebeb;
   --transition-time: 0.15s;
   --border-radius: 0.25rem;
-  --active-color: rgb(84, 102, 58);
-  --error-color: #b00020;
-  --ok-color: #15b000;
-  --unknown-color: #7f7f7f;
 }
 
 .left {
@@ -91,11 +78,11 @@ a {
 }
 
 .error {
-  color: var(--error-color);
+  color: var(--color-warn-500);
 }
 
 .error-hint {
-  background-color: var(--error-color);
+  background-color: var(--color-warn-500);
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -108,11 +95,11 @@ a {
 }
 
 .ok {
-  color: var(--ok-color);
+  color: var(--color-accent-500);
 }
 
 .ok-hint {
-  background-color: var(--ok-color);
+  background-color: var(--color-accent-500);
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -125,7 +112,7 @@ a {
 }
 
 .unknown-hint {
-  background-color: var(--unknown-color);
+  background-color: var(--color-neutral-200);
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-top-left-radius: 50%;
