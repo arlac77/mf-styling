@@ -48,9 +48,9 @@ td {
 }
 
 .striped tbody tr:nth-of-type(odd) {
-  background: var(--color-neutral-100)
+  background: var(--color-neutral-100);
 }
 
 .hoverable tbody tr:hover {
-  background-color: var(--color-accent-100)
+  background-color: var(--color-accent-100);
 }
