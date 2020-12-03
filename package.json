@@ -4,12 +4,12 @@
   "files": [
     "button.css",
     "card.css",
+    "color-primary-cyan.css",
     "color-primary-fuchsia.css",
     "color-primary-inigo.css",
     "color-primary-lime.css",
-    "color-primary-teal.css",
-    "color-primary-cyan.css",
     "color-primary-rose.css",
+    "color-primary-teal.css",
     "color.css",
     "dropdown.css",
     "form.css",
@@ -22,7 +22,6 @@
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:css"
   },
-  "dependencies": {},
   "devDependencies": {
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0"
