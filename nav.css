@@ -59,17 +59,16 @@ nav ul a {
   color: var(--color-neutral-400);
   fill: currentColor;
   font-size: 1.17em;
-  font-weight: bold;
-  margin: 0;
+}
+
+nav a.active,
+nav a:focus,
+nav a:hover {
+  background-color: var(--color-primary-800);
 }
 
 nav a.active {
   color: var(--color-neutral-100);
-  background-color: var(--color-primary-800);
-}
-
-nav a:focus:hover {
-  background-color: var(--color-primary-800);
 }
 
 nav ul {
