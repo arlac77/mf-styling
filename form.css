@@ -32,3 +32,8 @@ input:disabled {
   border: 0 solid var(--color-neutral-50);
   pointer-events: none;
 }
+
+input:not(:placeholder-shown):invalid {
+  color: var(--color-warn-900);
+  outline-color: var(--color-warn-900);
+}
