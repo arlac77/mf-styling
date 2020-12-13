@@ -131,8 +131,3 @@ a {
   line-height: 16px;
   width: 8px;
 }
-
-.log {
-  white-space: pre;
-  font-family: courier, "courier new", monospace;
-}

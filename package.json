@@ -15,7 +15,8 @@
     "form.css",
     "global.css",
     "nav.css",
-    "table.css"
+    "table.css",
+    "log.css"
   ],
   "description": "styling for mf webapps",
   "scripts": {
