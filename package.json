@@ -14,9 +14,9 @@
     "dropdown.css",
     "form.css",
     "global.css",
+    "log.css",
     "nav.css",
-    "table.css",
-    "log.css"
+    "table.css"
   ],
   "description": "styling for mf webapps",
   "scripts": {
