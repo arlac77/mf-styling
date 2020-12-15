@@ -37,3 +37,15 @@ input:not(:placeholder-shown):invalid {
   color: var(--color-warn-900);
   outline-color: var(--color-warn-900);
 }
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.384);
+}
+

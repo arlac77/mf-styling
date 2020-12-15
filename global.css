@@ -74,17 +74,6 @@ a {
   padding: 0.5rem;
 }
 
-.modal {
-  position: fixed;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.384);
-}
-
 .error {
   color: var(--color-warn-500);
 }
