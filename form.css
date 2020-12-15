@@ -33,9 +33,9 @@ input:disabled {
   pointer-events: none;
 }
 
-input:not(:placeholder-shown):invalid {
-  color: var(--color-warn-900);
-  outline-color: var(--color-warn-900);
+input:invalid {
+  outline-color: var(--color-warn-500);
+  background-color: var(--color-warn-50);
 }
 
 .modal {
