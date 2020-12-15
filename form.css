@@ -46,6 +46,5 @@ input:not(:placeholder-shown):invalid {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.384);
+  background: var(--color-neutral-900-40);
 }
-
