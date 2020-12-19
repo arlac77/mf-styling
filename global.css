@@ -7,14 +7,6 @@
   --border-radius: 0.25rem;
 }
 
-.show {
-  transform: translateY(0%);
-}
-
-.hide {
-  transform: translateY(-100%);
-}
-
 .left {
   float: left !important;
 }
