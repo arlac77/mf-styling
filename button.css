@@ -1,4 +1,3 @@
-
 button {
   text-align: center;
   text-decoration: none;
@@ -19,22 +18,23 @@ button {
     box-shadow var(--transition-time) ease-in-out;
 }
 
+button[aria-keyshortcuts="enter"],
 button[type="submit"] {
   background-color: var(--color-primary-800);
 }
 
 button:hover {
   outline: 2px;
-  background-color: var(--color-primary-700);
+  background-color: var(--color-primary-500);
 }
 
 button:active {
-  background-color: var(--color-primary-800);
+  background-color: var(--color-primary-900);
   cursor: progress;
 }
 
 button:disabled {
-  background-color: var(--color-primary-900);
+  background-color: var(--color-primary-300);
   pointer-events: none;
 }
 
