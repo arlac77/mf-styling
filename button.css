@@ -18,7 +18,7 @@ button {
     box-shadow var(--transition-time) ease-in-out;
 }
 
-button[aria-keyshortcuts="enter"],
+button[aria-keyshortcuts*="enter"],
 button[type="submit"] {
   background-color: var(--color-primary-800);
 }
