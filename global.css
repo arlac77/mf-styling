@@ -7,13 +7,6 @@
   --border-radius: 0.25rem;
 }
 
-.left {
-  float: left !important;
-}
-
-.right {
-  float: right !important;
-}
 
 .row {
   display: flex;
@@ -52,11 +45,6 @@ a {
   background-color: transparent;
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .window {
   background-color: white;

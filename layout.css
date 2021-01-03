@@ -1,0 +1,13 @@
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

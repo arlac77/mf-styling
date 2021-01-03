@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../nav.css" />
     <link rel="stylesheet" href="../../button.css" />
     <link rel="stylesheet" href="../../form.css" />
+    <link rel="stylesheet" href="../../layout.css" />
   </head>
 
   <body>
@@ -57,14 +58,16 @@
             <input class="" type="checkbox" value="" />
           </label>
 
-          <button aria-keyshortcuts="shift+Enter" active>
-            Enter Active
-            <div class="spinner"/>
-          </button>
-          <button aria-keyshortcuts="Enter" disabled>Enter Disabled</button>
-          <button aria-keyshortcuts="Enter">Enter Enabled</button>
-          <button>Normal</button>
-          <button type="reset">Reset</button>
+          <div class="center">
+            <button aria-keyshortcuts="shift+Enter" active>
+              Enter Active
+              <div class="spinner" />
+            </button>
+            <button aria-keyshortcuts="Enter" disabled>Enter Disabled</button>
+            <button aria-keyshortcuts="Enter">Enter Enabled</button>
+            <button>Normal</button>
+            <button type="reset">Reset</button>
+          </div>
         </form>
         <form disabled>
           <label for="username">
@@ -90,7 +93,9 @@
               disabled
             />
           </label>
-          <button type="submit" disabled>Login</button>
+          <div class="center">
+            <button type="submit" disabled>Login</button>
+          </div>
         </form>
       </div>
       <div class="center">
@@ -141,8 +146,9 @@
               />
             </label>
           </fieldset>
-
-          <button type="submit">Login</button>
+          <div class="center">
+            <button type="submit">Login</button>
+          </div>
         </form>
       </div>
     </main>
