@@ -34,8 +34,7 @@ input:disabled {
 }
 
 input:invalid {
-  outline-color: var(--color-warn-500);
-  background-color: var(--color-warn-50);
+  background-color: var(--color-warn-50-80);
 }
 
 .modal {
