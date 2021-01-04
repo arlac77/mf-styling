@@ -7,7 +7,6 @@
   --border-radius: 0.25rem;
 }
 
-
 .row {
   display: flex;
   flex: 0 1 auto;
@@ -45,12 +44,11 @@ a {
   background-color: transparent;
 }
 
-
 .window {
-  background-color: white;
-  border: 2px solid lightgray;
+  background-color: var(--color-neutral-50);
+  border: 2px solid var(--color-neutral-200);
   border-radius: 0.5rem;
-  box-shadow: 12px 12px rgba(0.9, 0.9, 0.9, 0.1);
+  box-shadow: 12px 12px var(--color-neutral-900-10);
   padding: 0.5rem;
 }
 
