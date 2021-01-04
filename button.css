@@ -38,6 +38,10 @@ button:disabled {
   pointer-events: none;
 }
 
+button + .failed {
+  background-color: var(--color-warn-500);
+}
+
 .spinner {
   opacity: 1;
   display: inline-block;
