@@ -1,6 +1,7 @@
 
 form {
-  margin: 0.5rem;
+  display: grid;
+  grid-gap: 8px;
 }
 
 fieldset {

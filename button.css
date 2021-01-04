@@ -1,7 +1,7 @@
 button {
   text-align: center;
   text-decoration: none;
-  margin: 2px 0;
+  margin: 2px 2px;
   border: solid 1px transparent;
   border-radius: var(--border-radius);
   color: var(--color-neutral-100);
