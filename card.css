@@ -8,7 +8,7 @@
 }
 
 .card-panel {
-  transition: box-shadow 0.25s;
+  transition: box-shadow var(--transition-time);
   padding: 24px;
   margin: 0.5rem 0 1rem 0;
   border-radius: 2px;
@@ -19,7 +19,7 @@
   position: relative;
   margin: 0.5rem 0 1rem 0;
   background-color: var(--color-neutral-100);
-  transition: box-shadow 0.25s;
+  transition: box-shadow var(--transition-time);
   border-radius: 2px;
 }
 
@@ -172,7 +172,7 @@
   padding: 16px 24px;
   color: var(--color-accent-400);
   margin-right: 24px;
-  transition: color 0.3s ease;
+  transition: color var(--transition-time) ease;
   text-transform: uppercase;
 }
 
