@@ -43,17 +43,20 @@ button + .failed {
 }
 
 .spinner {
+  --border: 5px;
+  --size: 2px;
+
   opacity: 1;
   display: inline-block;
   vertical-align: middle;
-  border: 5px solid var(--color-neutral-100);
-  border-top: 5px solid var(--color-accent-600);
+  border: var(--border) solid var(--color-neutral-100);
+  border-top: var(--border) solid var(--color-accent-600);
   border-radius: 100%;
-  width: 2px;
-  height: 2px;
+  height: var(--size);
+  width: var(--size);
   animation: spin 2s linear infinite;
-  margin: 0 0 2px 9px;
-  padding: 2px;
+  margin: 0 0 0 5px;
+  padding: var(--size);
   transition: all var(--transition-time) ease;
 }
 
