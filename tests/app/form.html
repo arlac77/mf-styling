@@ -60,12 +60,14 @@
             </label>
 
             <div class="center">
-              <button aria-keyshortcuts="shift+Enter" active>
+              <button id="button1" aria-keyshortcuts="shift+Enter" active>
                 Enter Active
                 <div class="spinner" />
               </button>
               <button aria-keyshortcuts="Enter" disabled>Enter Disabled</button>
-              <button aria-keyshortcuts="Enter">Enter Enabled</button>
+              <button id="button2" aria-keyshortcuts="Enter">
+                Enter Enabled
+              </button>
               <button>Normal</button>
               <button type="reset">Reset</button>
             </div>
@@ -159,4 +161,18 @@
       </div>
     </main>
   </body>
+  <script defer>
+    const toggleSpinner = event => {
+      const button = event.currentTarget;
+      let text = button.innerHTML;
+      if (text.match(/spinner/)) {
+        button.innerHTML = text.replace(/<.*/, "");
+      } else {
+        button.innerHTML = text + '<div class="spinner" />';
+      }
+    };
+
+    document.getElementById("button1").onclick = toggleSpinner;
+    document.getElementById("button2").onclick = toggleSpinner;
+  </script>
 </html>
