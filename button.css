@@ -1,4 +1,7 @@
+
 button {
+  --border-radius: 0.25rem;
+
   text-align: center;
   text-decoration: none;
   margin: 2px 2px;
