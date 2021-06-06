@@ -68,15 +68,6 @@
   overflow: hidden;
 }
 
-.card.small .card-action,
-.card.medium .card-action,
-.card.large .card-action {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .card.small .card-image + .card-content,
 .card.medium .card-image + .card-content,
 .card.large .card-image + .card-content {
@@ -178,6 +169,15 @@
 
 .card .card-action:last-child {
   border-radius: 0 0 2px 2px;
+}
+
+.card.small .card-action,
+.card.medium .card-action,
+.card.large .card-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .card .card-reveal {
