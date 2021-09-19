@@ -1,10 +1,10 @@
 
 button {
   --border-radius: 0.25rem;
-
+  --button-margin: 2px;
   text-align: center;
   text-decoration: none;
-  margin: 2px 2px;
+  margin: var(--button-margin) var(--button-margin);
   border: solid 1px transparent;
   border-radius: var(--border-radius);
   color: var(--color-neutral-100);
@@ -53,10 +53,12 @@ button + .failed {
 
 .button-group button:is(:first-child) {
   border-radius: var(--border-radius) 0 0 var(--border-radius);
+  margin: 0 0 0 var(--button-margin);
 }
 
 .button-group button:is(:last-child) {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  margin: 0 var(--button-margin) 0 0;
 }
 
 .spinner {
