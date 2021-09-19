@@ -47,18 +47,18 @@ button + .failed {
 
 .button-group button {
   float: left;
-  margin: 0;
+  margin: var(--button-margin) 0 var(--button-margin) 0;
   border-radius: 0;
 }
 
 .button-group button:is(:first-child) {
   border-radius: var(--border-radius) 0 0 var(--border-radius);
-  margin: 0 0 0 var(--button-margin);
+  margin: var(--button-margin) 0 var(--button-margin) var(--button-margin);
 }
 
 .button-group button:is(:last-child) {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  margin: 0 var(--button-margin) 0 0;
+  margin: var(--button-margin) var(--button-margin) var(--button-margin) 0;
 }
 
 .spinner {
