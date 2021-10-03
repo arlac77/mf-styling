@@ -31,29 +31,30 @@
       <div class="center">
         <div class="window">
           <form>
-            <label for="username">
-              Username
-              <input
-                id="username"
-                type="text"
-                placeholder="Username"
-                name="username"
-                size="40"
-                required
-              />
-            </label>
-            <label for="password">
-              Password
-              <input
-                id="password"
-                type="password"
-                placeholder="Password"
-                name="password"
-                size="40"
-                required
-              />
-            </label>
-
+            <fieldset>
+              <label for="username">
+                Username
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  size="40"
+                  required
+                />
+              </label>
+              <label for="password">
+                Password
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  size="40"
+                  required
+                />
+              </label>
+            </fieldset>
             <label for="spam-check">
               Spam
               <input class="" type="checkbox" value="" />
@@ -71,34 +72,36 @@
               <button>Normal</button>
             </div>
             <button type="reset">Reset</button>
-
           </form>
         </div>
         <div class="window">
           <form disabled>
-            <label for="username">
-              Username
-              <input
-                id="username"
-                type="text"
-                placeholder="Username"
-                name="username"
-                required
-                disabled
-                value="XXX"
-              />
-            </label>
-            <label for="password">
-              Password
-              <input
-                id="password"
-                type="password"
-                placeholder="Password"
-                name="password"
-                required
-                disabled
-              />
-            </label>
+            <fieldset>
+              <label for="username">
+                Username
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  required
+                  disabled
+                  value="XXX"
+                />
+              </label>
+              <label for="password">
+                Password
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  required
+                  disabled
+                />
+              </label>
+            </fieldset>
+
             <div class="center">
               <button type="submit" disabled>Login</button>
             </div>
