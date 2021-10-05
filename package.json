@@ -21,9 +21,9 @@
   ],
   "description": "styling for mf webapps",
   "scripts": {
+    "start": "vite",
     "lint:css": "stylelint *.css",
-    "lint": "npm run lint:css",
-    "start": "vite"
+    "lint": "npm run lint:css"
   },
   "devDependencies": {
     "stylelint": "^13.13.1",
