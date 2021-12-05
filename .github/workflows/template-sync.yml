@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  template-sync:
+    runs-on: ubuntu-latest
+    name: sync template
+    steps:
+      - name: sync with template
+        uses: template-tools/template-sync-action@v1.0.0
+        with:
+          template: 'arlac77/template-css'
