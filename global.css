@@ -58,10 +58,7 @@ a {
 
 .error-hint {
   background-color: var(--color-warn-500);
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
   height: 8px;
@@ -75,10 +72,7 @@ a {
 
 .ok-hint {
   background-color: var(--color-accent-500);
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
   height: 8px;
@@ -88,10 +82,7 @@ a {
 
 .unknown-hint {
   background-color: var(--color-neutral-200);
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
   height: 8px;

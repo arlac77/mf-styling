@@ -1,7 +1,7 @@
-
 button {
   --border-radius: 0.25rem;
   --button-margin: 2px;
+
   text-align: center;
   text-decoration: none;
   margin: var(--button-margin) var(--button-margin);
