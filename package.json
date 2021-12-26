@@ -44,13 +44,13 @@
     "url": "https://github.com/arlac77/mf-styling/issues"
   },
   "homepage": "https://github.com/arlac77/mf-styling#readme",
-  "pkgbuild" : {
-    "nginx.sites.dir" : "/etc/nginx/sites/common"
-  },
   "template": {
     "inheritFrom": [
       "arlac77/template-css",
       "arlac77/template-vite"
     ]
+  },
+  "pkgbuild": {
+    "nginx.sites.dir": "/etc/nginx/sites/common"
   }
 }
