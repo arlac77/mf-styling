@@ -51,6 +51,9 @@
     ]
   },
   "pkgbuild": {
-    "nginx.sites.dir": "/etc/nginx/sites/common"
+    "nginx.sites.dir": "/etc/nginx/sites/common",
+    "output": {
+      "pkg": {}
+    }
   }
 }
