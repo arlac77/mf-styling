@@ -50,10 +50,11 @@
       "arlac77/template-vite"
     ]
   },
-  "pkgbuild": {
+  "pkg": {
     "nginx.sites.dir": "/etc/nginx/sites/common",
+    "installdir": "/services/${name}",
     "output": {
-      "pkg": {}
+      "arch": {}
     }
   }
 }
