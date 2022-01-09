@@ -19,7 +19,7 @@
     "nav.css",
     "table.css"
   ],
-  "description": "styling for mf webapps",
+  "description": "css for single page apps",
   "keywords": [
     "vite"
   ],
