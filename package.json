@@ -51,6 +51,7 @@
     ]
   },
   "pkg": {
+    "apstract": true,
     "nginx.sites.dir": "/etc/nginx/sites/common",
     "csp.endpoint": "/services/reports/csp",
     "installdir": "/services/${name}",
