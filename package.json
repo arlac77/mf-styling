@@ -1,4 +1,4 @@
-{
+G{
   "name": "mf-styling",
   "version": "0.0.0-semantic-release",
   "files": [
@@ -27,7 +27,6 @@
     "start": "vite",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:css",
-    "build": "vite build",
     "dev": "vite",
     "serve": "vite preview"
   },
@@ -53,7 +52,7 @@
   "pkg": {
     "abstract": true,
     "nginx.sites.dir": "/etc/nginx/sites/common",
-    "csp.endpoint": "/services/csp",
+    "csp.endpoint": "/services/csp/upload",
     "installdir": "/services/${name}",
     "group": "frontend",
     "output": {
