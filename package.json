@@ -43,12 +43,6 @@
     "url": "https://github.com/arlac77/mf-styling/issues"
   },
   "homepage": "https://github.com/arlac77/mf-styling#readme",
-  "template": {
-    "inheritFrom": [
-      "arlac77/template-css",
-      "arlac77/template-vite"
-    ]
-  },
   "pkg": {
     "abstract": true,
     "nginx.sites.dir": "/etc/nginx/sites/common",
@@ -58,5 +52,11 @@
     "output": {
       "arch": {}
     }
+  },
+  "template": {
+    "inheritFrom": [
+      "arlac77/template-css",
+      "arlac77/template-vite"
+    ]
   }
 }
