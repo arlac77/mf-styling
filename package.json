@@ -48,7 +48,6 @@
     "nginx.sites.dir": "/etc/nginx/sites/common",
     "csp.endpoint": "/services/csp/upload",
     "installdir": "/services/${name}",
-    "group": "frontend",
     "output": {
       "arch": {}
     }
