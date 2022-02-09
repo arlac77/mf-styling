@@ -49,7 +49,7 @@ nav a {
 
 nav ul a {
   color: var(--color-neutral-400);
-  fill: currentColor;
+  fill: currentcolor;
   font-size: 1.17em;
 }
 
