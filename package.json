@@ -30,7 +30,8 @@
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:css",
     "dev": "vite",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "pkg": "npm-pkgbuild --verbose -Dversion=0.0.1"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^9.0.2",
