@@ -25,6 +25,7 @@
     "web"
   ],
   "scripts": {
+    "prepare": "vite build",
     "start": "vite",
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:css",
@@ -55,7 +56,7 @@
   "pkg": {
     "content": {
       "${installdir}/": {
-        "base": "public/"
+        "base": "build"
       },
       "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
     },
