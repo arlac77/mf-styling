@@ -31,6 +31,9 @@
     "serve": "vite preview"
   },
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "npm-pkgbuild": "^7.25.7",
     "stylelint": "^14.4.0",
     "stylelint-config-standard": "^25.0.0",
@@ -45,6 +48,7 @@
   },
   "homepage": "https://github.com/arlac77/mf-styling#readme",
   "pkg": {
+    "content": {},
     "output": {
       "arch": {}
     },
@@ -53,9 +57,18 @@
     "installdir": "/services/${name}",
     "nginx.sites.dir": "/etc/nginx/sites/common"
   },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  },
   "template": {
     "inheritFrom": [
       "arlac77/template-css",
+      "arlac77/template-pacman",
       "arlac77/template-vite"
     ]
   }
