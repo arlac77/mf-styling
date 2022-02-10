@@ -19,7 +19,7 @@
     "nav.css",
     "table.css"
   ],
-  "description": "css for single page apps",
+  "description": "css as used for mf apps",
   "keywords": [
     "vite"
   ],
@@ -33,7 +33,8 @@
   "devDependencies": {
     "stylelint": "^14.4.0",
     "stylelint-config-standard": "^25.0.0",
-    "vite": "^2.8.0"
+    "vite": "^2.8.0",
+    "npm-pkgbuild" : "^7.25.7"
   },
   "repository": {
     "type": "git",
