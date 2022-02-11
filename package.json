@@ -57,7 +57,8 @@
   "pkg": {
     "content": {
       "${installdir}/": {
-        "base": "build"
+        "base": "build",
+        "pattern": ["*.css","*.html"]
       },
       "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
     },
