@@ -58,7 +58,10 @@
     "content": {
       "${installdir}/": {
         "base": "build",
-        "pattern": ["*.css","*.html"]
+        "pattern": [
+          "*.css",
+          "*.html"
+        ]
       },
       "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
     },
@@ -96,5 +99,8 @@
       "arlac77/template-vite",
       "arlac77/template-web-app"
     ]
+  },
+  "optionalDependencies": {
+    "mf-hosting": "github:arlac77/mf-hosting"
   }
 }
