@@ -37,11 +37,11 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "npm-pkgbuild": "^7.25.10",
+    "npm-pkgbuild": "^7.25.11",
     "semantic-release": "^19.0.2",
-    "stylelint": "^14.5.0",
+    "stylelint": "^14.5.1",
     "stylelint-config-standard": "^25.0.0",
-    "vite": "^2.8.2"
+    "vite": "^2.8.3"
   },
   "optionalDependencies": {
     "mf-hosting": "github:arlac77/mf-hosting"
