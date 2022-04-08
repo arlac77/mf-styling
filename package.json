@@ -30,7 +30,7 @@
     "lint:css": "stylelint *.css",
     "lint": "npm run lint:css",
     "dev": "vite",
-    "pkg": "npm-pkgbuild --verbose -Dversion=0.0.1",
+    "pkg": "vite build;npm-pkgbuild --verbose -Dversion=0.0.3",
     "serve": "vite preview"
   },
   "devDependencies": {
@@ -71,13 +71,9 @@
     "output": {
       "arch": {}
     },
-    "hooks": "pkg/hooks.sh",
     "groups": "web",
     "abstract": true,
     "csp.endpoint": "/services/csp/upload",
-    "depends": {
-      "nginx-mainline": ">=1.21.4"
-    },
     "installdir": "/services/${name}",
     "nginx.sites.dir": "/etc/nginx/sites/common"
   },
