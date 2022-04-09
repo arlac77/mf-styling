@@ -66,9 +66,18 @@
           "*.html"
         ]
       },
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+      "${installdir}/": {
+        "base": "public/"
+      },
+      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
     },
-    "groups": "web"
+    "hooks": "pkg/hooks.sh",
+    "groups": "web",
+    "depends": {
+      "nginx-mainline": ">=1.21.4"
+    },
+    "installdir": "/services/mf-styling/frontend"
   },
   "release": {
     "plugins": [
