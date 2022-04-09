@@ -66,14 +66,12 @@
           "*.html"
         ]
       },
-      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
+      "${nginx.sites.dir}/${name}.conf": "pkg/nginx.conf"
     },
     "output": {
       "arch": {}
     },
     "groups": "web",
-    "abstract": true,
-    "csp.endpoint": "/services/csp/upload",
     "installdir": "/services/${name}",
     "nginx.sites.dir": "/etc/nginx/sites/common"
   },
