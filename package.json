@@ -37,7 +37,7 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "npm-pkgbuild": "^8.3.11",
+    "npm-pkgbuild": "^8.3.12",
     "semantic-release": "^19.0.2",
     "stylelint": "^14.6.1",
     "stylelint-config-standard": "^25.0.0",
@@ -66,12 +66,17 @@
           "*.html"
         ]
       },
-      "${nginx.sites.dir}/${name}.conf": "pkg/nginx.conf"
+      "${nginx.sites.dir}/${name}.conf": "pkg/nginx.conf",
+      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
     },
     "output": {
       "arch": {}
     },
+    "hooks": "pkg/hooks.sh",
     "groups": "web",
+    "depends": {
+      "nginx-mainline": ">=1.21.4"
+    },
     "installdir": "/services/${name}",
     "nginx.sites.dir": "/etc/nginx/sites/common"
   },
