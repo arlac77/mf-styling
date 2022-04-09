@@ -59,18 +59,16 @@
   },
   "pkg": {
     "content": {
-      "${installdir}/": {
+      "${installdir}": {
         "base": "build",
         "pattern": [
           "*.css",
           "*.html"
         ]
       },
-      "${nginx.sites.dir}/${name}.conf": "pkg/nginx.conf",
-      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
-    "groups": "web",
-    "installdir": "/services/${name}"
+    "groups": "web"
   },
   "release": {
     "plugins": [
