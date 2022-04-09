@@ -68,12 +68,8 @@
       },
       "${nginx.sites.dir}/${name}.conf": "pkg/nginx.conf"
     },
-    "output": {
-      "arch": {}
-    },
     "groups": "web",
-    "installdir": "/services/${name}",
-    "nginx.sites.dir": "/etc/nginx/sites/common"
+    "installdir": "/services/${name}"
   },
   "release": {
     "plugins": [
