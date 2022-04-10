@@ -59,25 +59,21 @@
   },
   "pkg": {
     "content": {
-      "${installdir}": {
+      "${install.dir}": {
         "base": "build",
         "pattern": [
           "*.css",
           "*.html"
         ]
       },
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
-      "${installdir}/": {
-        "base": "public/"
-      },
-      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
     "hooks": "pkg/hooks.sh",
     "groups": "web",
     "depends": {
       "nginx-mainline": ">=1.21.4"
     },
-    "installdir": "/services/mf-styling/frontend"
+    "install.dir": "/services/${name}/frontend/"
   },
   "release": {
     "plugins": [
