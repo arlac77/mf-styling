@@ -41,7 +41,7 @@
     "semantic-release": "^19.0.2",
     "stylelint": "^14.6.1",
     "stylelint-config-standard": "^25.0.0",
-    "vite": "^2.9.1"
+    "vite": "^2.9.3"
   },
   "optionalDependencies": {
     "mf-hosting": "github:arlac77/mf-hosting"
