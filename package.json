@@ -2,22 +2,22 @@
   "name": "mf-styling",
   "version": "0.0.0-semantic-release",
   "files": [
-    "button.css",
-    "card.css",
-    "color-primary-cyan.css",
-    "color-primary-fuchsia.css",
-    "color-primary-inigo.css",
-    "color-primary-lime.css",
-    "color-primary-rose.css",
-    "color-primary-teal.css",
-    "color.css",
-    "dropdown.css",
-    "form.css",
-    "global.css",
-    "layout.css",
-    "log.css",
-    "nav.css",
-    "table.css"
+    "src/button.css",
+    "src/card.css",
+    "src/color-primary-cyan.css",
+    "src/color-primary-fuchsia.css",
+    "src/color-primary-inigo.css",
+    "src/color-primary-lime.css",
+    "src/color-primary-rose.css",
+    "src/color-primary-teal.css",
+    "src/color.css",
+    "src/dropdown.css",
+    "src/form.css",
+    "src/global.css",
+    "src/layout.css",
+    "src/log.css",
+    "src/nav.css",
+    "src/table.css"
   ],
   "description": "css as used for mf apps",
   "keywords": [
@@ -27,7 +27,7 @@
   "scripts": {
     "prepare": "vite build",
     "start": "vite",
-    "lint:css": "stylelint *.css",
+    "lint:css": "stylelint src/*.css",
     "lint": "npm run lint:css",
     "dev": "vite",
     "pkg": "vite build;npm-pkgbuild --verbose -Dversion=0.0.3",
@@ -54,9 +54,6 @@
     "url": "https://github.com/arlac77/mf-styling/issues"
   },
   "homepage": "https://github.com/arlac77/mf-styling#readme",
-  "config": {
-    "base": "/services/mf-styling"
-  },
   "pkg": {
     "content": {
       "${install.dir}": {
@@ -66,7 +63,8 @@
           "*.html"
         ]
       },
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+      "http.base.path": "/services/${name}"
     },
     "hooks": "pkg/hooks.sh",
     "groups": "web",
