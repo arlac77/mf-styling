@@ -1,8 +1,9 @@
+import { readFile } from "fs/promises";
 import { defineConfig } from "vite";
 
 export default defineConfig(async ({ command, mode }) => {
   const json = JSON.parse(await readFile(new URL("package.json", import.meta.url).pathname, { encoding: "utf8" }));
-  const base = json.pkg['http.base.path'];
+  const base = json.pkg['http.base.path'] + '/';
 
   return {
     publicDir: "../../src",
