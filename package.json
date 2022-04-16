@@ -57,11 +57,7 @@
   "pkg": {
     "content": {
       "${install.dir}": {
-        "base": "build",
-        "pattern": [
-          "*.css",
-          "*.html"
-        ]
+        "base": "build"
       },
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
       "http.base.path": "/services/${name}"
