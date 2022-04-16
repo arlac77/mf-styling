@@ -31,7 +31,7 @@
     "lint:css": "stylelint src/*.css",
     "lint": "npm run lint:css",
     "dev": "vite",
-    "pkg": "vite build;npm-pkgbuild --verbose -Dversion=0.0.3",
+    "pkg": "vite build;npm-pkgbuild --verbose",
     "serve": "vite preview"
   },
   "devDependencies": {
@@ -78,7 +78,7 @@
       [
         "@semantic-release/exec",
         {
-          "publishCmd": "npx npm-pkgbuild"
+          "publishCmd": "npm run pkg"
         }
       ]
     ]
