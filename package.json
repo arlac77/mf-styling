@@ -28,7 +28,7 @@
   "scripts": {
     "prepare": "vite build",
     "start": "vite",
-    "lint:css": "stylelint src/*.css",
+    "lint:css": "stylelint src/*.css && stylelint *.css",
     "lint": "npm run lint:css",
     "dev": "vite",
     "pkg": "vite build;npm-pkgbuild --verbose",
@@ -55,6 +55,9 @@
     "url": "https://github.com/arlac77/mf-styling/issues"
   },
   "homepage": "https://github.com/arlac77/mf-styling#readme",
+  "config": {
+    "base": "/services/mf-styling"
+  },
   "pkg": {
     "content": {
       "${install.dir}": {
@@ -67,12 +70,14 @@
     "http.base.path": "/services/${name}",
     "depends": {
       "nginx-mainline": ">=1.21.4"
-    }
+    },
+    "install.dir": "/services/mf-styling/frontend/"
   },
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
       "@semantic-release/github",
       "@semantic-release/npm",
       [
