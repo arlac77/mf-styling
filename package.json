@@ -59,11 +59,11 @@
       "${install.dir}": {
         "base": "build"
       },
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
-      "http.base.path": "/services/${name}"
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
     "hooks": "pkg/hooks.sh",
     "groups": "web",
+    "http.base.path": "/services/${name}",
     "depends": {
       "nginx-mainline": ">=1.21.4"
     }
