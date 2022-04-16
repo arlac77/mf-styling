@@ -20,6 +20,7 @@
     "src/table.css"
   ],
   "description": "css as used for mf apps",
+  "license": "BSD-2-Clause",
   "keywords": [
     "vite",
     "web"
