@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig(async ({ command, mode }) => {
   return {
-    publicDir: "../..",
+    publicDir: "../../src",
     root: "tests/app",
     build: {
       outDir: "../../build",
