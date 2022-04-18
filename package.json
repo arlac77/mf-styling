@@ -20,11 +20,11 @@
     "src/table.css"
   ],
   "description": "css as used for mf apps",
-  "license": "BSD-2-Clause",
   "keywords": [
     "vite",
     "web"
   ],
+  "license": "BSD-2-Clause",
   "scripts": {
     "prepare": "vite build",
     "start": "vite",
@@ -40,7 +40,7 @@
     "@semantic-release/release-notes-generator": "^10.0.3",
     "npm-pkgbuild": "^8.3.18",
     "semantic-release": "^19.0.2",
-    "stylelint": "^14.6.1",
+    "stylelint": "^14.7.1",
     "stylelint-config-standard": "^25.0.0",
     "vite": "^2.9.5"
   },
@@ -67,10 +67,10 @@
     },
     "hooks": "pkg/hooks.sh",
     "groups": "web",
-    "http.base.path": "/services/${name}",
     "depends": {
       "nginx-mainline": ">=1.21.4"
     },
+    "http.base.path": "/services/${name}",
     "install.dir": "/services/mf-styling/frontend/"
   },
   "release": {
@@ -84,6 +84,12 @@
         "@semantic-release/exec",
         {
           "publishCmd": "npm run pkg"
+        }
+      ],
+      [
+        "@semantic-release/exec",
+        {
+          "publishCmd": "npx npm-pkgbuild"
         }
       ]
     ]
