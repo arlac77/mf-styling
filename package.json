@@ -31,7 +31,6 @@
     "lint:css": "stylelint src/*.css && stylelint *.css",
     "lint": "npm run lint:css",
     "dev": "vite",
-    "pkg": "vite build;npm-pkgbuild --verbose",
     "serve": "vite preview"
   },
   "devDependencies": {
@@ -77,15 +76,8 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
       "@semantic-release/github",
       "@semantic-release/npm",
-      [
-        "@semantic-release/exec",
-        {
-          "publishCmd": "npm run pkg"
-        }
-      ],
       [
         "@semantic-release/exec",
         {
