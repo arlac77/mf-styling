@@ -83,6 +83,12 @@
         {
           "publishCmd": "npx npm-pkgbuild --verbose"
         }
+      ],
+      [
+        "@semantic-release/exec",
+        {
+          "publishCmd": "npx npm-pkgbuild"
+        }
       ]
     ]
   },
