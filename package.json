@@ -28,7 +28,7 @@
   "scripts": {
     "prepare": "vite build",
     "start": "vite",
-    "lint:css": "stylelint src/*.css && stylelint ./src/*.css",
+    "lint:css": "stylelint ./src/*.css",
     "lint": "npm run lint:css",
     "dev": "vite",
     "serve": "vite preview"
