@@ -60,7 +60,7 @@
   "config": {
     "base": "/services/mf-styling"
   },
-  "pkg": {
+  "pkgbuild": {
     "content": {
       "${install.dir}": {
         "base": "build"
