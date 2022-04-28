@@ -7,7 +7,7 @@ export default defineConfig(async ({ command, mode }) => {
       encoding: "utf8"
     })
   );
-  const base = json.pkg["http.base.path"].replace(/\$\{name\}/, json.name) + "/";
+  const base = json.pkgbuild["http.base.path"].replace(/\$\{name\}/, json.name) + "/";
 
   return {
     publicDir: "../../src",
