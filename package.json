@@ -48,7 +48,7 @@
     "vite": "^2.9.9"
   },
   "optionalDependencies": {
-    "mf-hosting": "^1.1.2"
+    "mf-hosting": "^1.2.1"
   },
   "repository": {
     "type": "git",
@@ -58,9 +58,6 @@
     "url": "https://github.com/arlac77/mf-styling/issues"
   },
   "homepage": "https://github.com/arlac77/mf-styling#readme",
-  "config": {
-    "base": "/services/mf-styling"
-  },
   "pkgbuild": {
     "content": {
       "${install.dir}": {
@@ -70,11 +67,8 @@
     },
     "hooks": "pkg/hooks.sh",
     "groups": "web",
-    "depends": {
-      "nginx-mainline": ">=1.21.4"
-    },
-    "http.base.path": "/services/${name}",
-    "install.dir": "/services/mf-styling/frontend/"
+    "http.path": "/services/${name}",
+    "install.dir": "${install.base.dir}${name}/frontend/"
   },
   "release": {
     "plugins": [
@@ -84,7 +78,7 @@
       [
         "@semantic-release/exec",
         {
-          "publishCmd": "npx npm-pkgbuild --verbose"
+          "publishCmd": "npx npm-pkgbuild --available --verbose"
         }
       ],
       "@semantic-release/github"
