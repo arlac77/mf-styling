@@ -20,6 +20,9 @@ export default defineConfig(async ({ command, mode }) => {
       emptyOutDir: true,
       minify: true,
       sourcemap: true
+    },
+    server: {
+      host: true
     }
   };
 });
