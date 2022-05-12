@@ -25,6 +25,12 @@
     "web",
     "design system"
   ],
+  "contributors": [
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
   "license": "BSD-2-Clause",
   "scripts": {
     "prepare": "vite build",
