@@ -9,6 +9,12 @@ jobs:
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: |
-            https://mfelten.dynv6.net/services/mf-styling/
+            https://mfelten.dynv6.net/services/mf-styling/index.html
+            https://mfelten.dynv6.net/services/mf-styling/color.html
+            https://mfelten.dynv6.net/services/mf-styling/card.html
+            https://mfelten.dynv6.net/services/mf-styling/table.html
+            https://mfelten.dynv6.net/services/mf-styling/form.html
+            https://mfelten.dynv6.net/services/mf-styling/modal.html
+            https://mfelten.dynv6.net/services/mf-styling/topnav.html
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
