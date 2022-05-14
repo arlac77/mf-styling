@@ -1,14 +1,13 @@
 import { readFile } from "fs/promises";
 import { defineConfig } from "vite";
+//import { extractFromPackage } from "npm-pkgbuild/src/module.mjs";
 
 export default defineConfig(async ({ command, mode }) => {
-  const json = JSON.parse(
-    await readFile(new URL("package.json", import.meta.url).pathname, {
-      encoding: "utf8"
-    })
-  );
-  const base = json.pkgbuild["http.path"].replace(/\$\{name\}/, json.name) + "/";
-
+  const { extractFromPackage } = await import(new URL("node_modules/npm-pkgbuild/src/module.mjs",import.meta.url));
+    
+  const res = extractFromPackage({ dir: new URL("./",import.meta.url).pathname}); 
+  const base = (await res.next()).value.properties["http.path"] + "/";
+      
   return {
     publicDir: "../../src",
     base,

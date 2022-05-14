@@ -47,7 +47,7 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "npm-pkgbuild": "^10.6.2",
+    "npm-pkgbuild": "^10.7.0",
     "semantic-release": "^19.0.2",
     "stylelint": "^14.8.2",
     "stylelint-config-standard": "^25.0.0",
@@ -73,8 +73,7 @@
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
     "hooks": "pkg/hooks.sh",
-    "groups": "web",
-    "http.path": "/services/${name}"
+    "groups": "web"
   },
   "release": {
     "plugins": [
