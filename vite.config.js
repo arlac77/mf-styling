@@ -9,11 +9,11 @@ export default defineConfig(async ({ command, mode }) => {
     dir: new URL("./", import.meta.url).pathname
   });
   const first = await res.next();
-  const base = /*first.value.properties["http.path"] +*/ "/";
+  const base = first.value.properties["http.path"] + "/";
 
   return {
     publicDir: "../../src",
-    base,
+  //  base,
 
     root: "tests/app",
     build: {
