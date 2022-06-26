@@ -77,9 +77,7 @@
       ],
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
-    "hooks": "pkg/hooks.sh",
-    "groups": "web",
-    "http.path": "/services/styling"
+    "groups": "web"
   },
   "release": {
     "plugins": [
