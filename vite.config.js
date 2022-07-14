@@ -12,8 +12,9 @@ export default defineConfig(async ({ command, mode }) => {
   const base = first.value.properties["http.path"] + "/";
 
   return {
+    appType: 'mpa',
     publicDir: "../../src",
-  //  base,
+    // base,
 
     root: "tests/app",
     build: {
