@@ -123,3 +123,44 @@ div {
 .ca900 {
   background-color: var(--color-accent-900);
 }
+
+
+.cw50 {
+  background-color: var(--color-warn-50);
+}
+
+.cw100 {
+  background-color: var(--color-warn-100);
+}
+
+.cw200 {
+  background-color: var(--color-warn-200);
+}
+
+.cw300 {
+  background-color: var(--color-warn-300);
+}
+
+.cw400 {
+  background-color: var(--color-warn-400);
+}
+
+.cw500 {
+  background-color: var(--color-warn-500);
+}
+
+.cw600 {
+  background-color: var(--color-warn-600);
+}
+
+.cw700 {
+  background-color: var(--color-warn-700);
+}
+
+.cw800 {
+  background-color: var(--color-warn-800);
+}
+
+.cw900 {
+  background-color: var(--color-warn-900);
+}
