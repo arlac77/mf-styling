@@ -20,7 +20,7 @@ export default defineConfig(async ({ command, mode }) => {
   const open = process.env.CI ? {} : { open: base };
 
   return {
-    appType: "mpa",
+   // appType: "mpa",
     publicDir: "../../src",
     // base,
 
