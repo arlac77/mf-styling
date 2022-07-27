@@ -70,9 +70,6 @@
       "${install.dir}": [
         {
           "base": "build"
-        },
-        {
-          "base": "tests/app"
         }
       ],
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"

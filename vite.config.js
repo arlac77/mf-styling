@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig(async ({ command, mode }) => {
   const { extractFromPackage } = await import(
@@ -19,12 +20,32 @@ export default defineConfig(async ({ command, mode }) => {
 
   const open = process.env.CI ? {} : { open: base };
 
+  const entries = [
+    "card",
+    "color",
+    "form",
+    "index",
+    "modal",
+    "other",
+    "tab",
+    "table",
+    "topnav"
+  ];
+
   return {
     publicDir: "../../src",
     base,
 
     root: "tests/app",
     build: {
+      rollupOptions: {
+        input: {
+          ...Object.fromEntries(
+            entries.map(e => [e, resolve(__dirname, `tests/app/${e}.html`)])
+          )
+        }
+      },
+
       outDir: "../../build",
       target: "esnext",
       emptyOutDir: true,
