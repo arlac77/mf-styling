@@ -7,13 +7,13 @@
   position: relative;
   margin: 0;
   padding: 0.3em 0.5em 0.4em;
-  border: 1px solid hsl(219, 1%, 72%);
+  border: 1px solid var(--color-primary-300);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
+  box-shadow: 0 0 0.2em var(--color-primary-500);
   overflow: visible;
   font-family: inherit;
   font-size: inherit;
-  background: hsl(220, 20%, 94%);
+  background: var(--color-primary-100);
 }
 
 [role="tab"]:hover::before,
@@ -23,19 +23,18 @@
   bottom: 100%;
   right: -1px;
   left: -1px;
-  border-radius: 0.2em 0.2em 0 0;
-  border-top: 3px solid hsl(20, 96%, 48%);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   content: "";
 }
 
 [role="tab"][aria-selected="true"] {
   border-radius: 0;
-  background: hsl(220, 43%, 99%);
+  background: var(--color-primary-500);
   outline: 0;
 }
 
 [role="tab"][aria-selected="true"]:not(:focus):not(:hover)::before {
-  border-top: 5px solid hsl(218, 96%, 48%);
+  background: var(--color-primary-600);
 }
 
 [role="tab"][aria-selected="true"]::after {
@@ -45,7 +44,7 @@
   right: 0;
   left: 0;
   height: 0.3em;
-  background: hsl(220, 43%, 99%);
+  background: var(--color-primary-500);
   box-shadow: none;
   content: "";
 }
@@ -60,22 +59,22 @@
 
 [role="tab"]:hover::before,
 [role="tab"]:focus::before {
-  border-color: hsl(20, 96%, 48%);
+  border-color: var(--color-primary-600);
 }
 
 [role="tabpanel"] {
   position: relative;
   z-index: 2;
   padding: 0.5em 0.5em 0.7em;
-  border: 1px solid hsl(219, 1%, 72%);
-  border-radius: 0 0.2em 0.2em 0.2em;
-  box-shadow: 0 0 0.2em hsl(219, 1%, 72%);
-  background: hsl(220, 43%, 99%);
+  border: 1px solid var(--color-primary-300);
+  border-radius: 0 var(--border-radius) var(--border-radius)
+    var(--border-radius);
+  box-shadow: 0 0 0.2em var(--color-primary-600);
 }
 
 [role="tabpanel"]:focus {
-  border-color: hsl(20, 96%, 48%);
-  box-shadow: 0 0 0.2em hsl(20, 96%, 48%);
+  border-color: var(--color-primary-800);
+  box-shadow: 0 0 0.2em var(--color-primary-600);
   outline: 0;
 }
 
@@ -84,7 +83,7 @@
   bottom: 0;
   right: -1px;
   left: -1px;
-  border-bottom: 3px solid hsl(20, 96%, 48%);
-  border-radius: 0 0 0.2em 0.2em;
+  border-bottom: 3px solid var(--color-primary-600);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
   content: "";
 }
