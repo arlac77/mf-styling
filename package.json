@@ -18,7 +18,7 @@
     "src/log.css",
     "src/nav.css",
     "src/table.css",
-    "src/tabs.css"
+    "src/tab.css"
   ],
   "description": "css as used for mf apps",
   "keywords": [
