@@ -2,21 +2,40 @@ name: CI
 'on': push
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node-version:
           - 18.7.0
+        os:
+          - ubuntu-latest
+        node: 18.7.0
+        browser:
+          - chrome
+          - firefox
     steps:
       - uses: actions/checkout@v3
-      - name: 'Build / Test Node ${{ matrix.node-version }}'
+      - name: Build / Test Node ${{ matrix.node-version }}
         uses: actions/setup-node@v3.4.1
         with:
-          node-version: '${{ matrix.node-version }}'
-          cache: 'npm'
+          node-version: ${{ matrix.node-version }}
+          cache: npm
       - run: npm ci
       - run: npm run build --if-present
       - run: npm run cover --if-present
+      - uses: actions/setup-node@v3.4.1
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm cit
+        env:
+          BROWSER: ${{ matrix.browser }}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: screenshots
+          path: ${{ github.workspace }}/build/test/**/*
+          retention-days: 3
+        if: always()
   release:
     needs:
       - test
@@ -36,11 +55,11 @@ jobs:
       - uses: actions/setup-node@v3.4.1
         with:
           node-version: 18.7.0
-          cache: 'npm'
+          cache: npm
       - run: npm ci
       - run: npx semantic-release
         env:
           CI: 'true'
           PKGBUILD_PUBLISH: ${{ secrets.PKGBUILD_PUBLISH }}
-          NPM_TOKEN: '${{ secrets.NPM_TOKEN }}'
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
