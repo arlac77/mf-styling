@@ -89,6 +89,11 @@
     ]
   },
   "template": {
+    "properties": {
+      "web-app": {
+        "publish": "build/"
+      }
+    },
     "inheritFrom": [
       "arlac77/template-css",
       "arlac77/template-pacman",
