@@ -91,7 +91,7 @@
   "template": {
     "properties": {
       "web-app": {
-        "publish": "build/"
+        "publish": "build"
       }
     },
     "inheritFrom": [
