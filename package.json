@@ -39,7 +39,8 @@
     "test": "npm run test:cafe",
     "test:cafe": "testcafe $BROWSER:headless tests/cafe/*.js -s build/test --page-request-timeout 3000 --app-init-delay 3000 --app \"vite preview\"",
     "lint:css": "stylelint ./src/*.css",
-    "lint": "npm run lint:css"
+    "lint": "npm run lint:css",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^9.0.2",
