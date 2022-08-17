@@ -17,14 +17,14 @@
     "src/layout.css",
     "src/log.css",
     "src/nav.css",
-    "src/table.css",
-    "src/tab.css"
+    "src/tab.css",
+    "src/table.css"
   ],
   "description": "css as used for mf apps",
   "keywords": [
+    "design system",
     "vite",
-    "web",
-    "design system"
+    "web"
   ],
   "contributors": [
     {
@@ -39,7 +39,8 @@
     "test": "npm run test:cafe",
     "test:cafe": "testcafe $BROWSER:headless tests/cafe/*.js -s build/test --page-request-timeout 3000 --app-init-delay 3000 --app \"vite preview\"",
     "lint:css": "stylelint ./src/*.css",
-    "lint": "npm run lint:css"
+    "lint": "npm run lint:css",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^9.0.2",
@@ -68,6 +69,9 @@
       "${install.dir}": [
         {
           "base": "build"
+        },
+        {
+          "base": "public/"
         }
       ],
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
