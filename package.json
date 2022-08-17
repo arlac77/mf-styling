@@ -17,14 +17,14 @@
     "src/layout.css",
     "src/log.css",
     "src/nav.css",
-    "src/table.css",
-    "src/tab.css"
+    "src/tab.css",
+    "src/table.css"
   ],
   "description": "css as used for mf apps",
   "keywords": [
+    "design system",
     "vite",
-    "web",
-    "design system"
+    "web"
   ],
   "contributors": [
     {
