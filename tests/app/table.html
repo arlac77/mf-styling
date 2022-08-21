@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/global.css" />
     <link rel="stylesheet" href="/nav.css" />
     <link rel="stylesheet" href="/table.css" />
+    <link rel="stylesheet" href="/table-sort.css" />
   </head>
 
   <body>
@@ -222,4 +223,32 @@
       </table>
     </main>
   </body>
+  <script type="text/javascript">
+    const SORT_NONE = "none";
+    const SORT_ASCENDING = "ascending";
+    const SORT_DESCENDING = "descending";
+    const SORT_OTHER = "other";
+
+    const orderByCycle = {
+      [SORT_NONE]: SORT_ASCENDING,
+      [SORT_ASCENDING]: SORT_DESCENDING,
+      [SORT_DESCENDING]: SORT_NONE
+    };
+
+    function toggleOrderBy(event) {
+      const node = event.currentTarget;
+      node.setAttribute(
+        "aria-sort",
+        orderByCycle[node.getAttribute("aria-sort")] || SORT_NONE
+      );
+    }
+
+    function makeSortable(node) {
+      node.onclick = toggleOrderBy;
+    }
+
+    for (const e of document.querySelectorAll("th")) {
+      makeSortable(e);
+    }
+  </script>
 </html>
