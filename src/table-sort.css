@@ -1,0 +1,18 @@
+th[aria-sort]::before {
+  float: right;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  content: "↕";
+}
+
+th[aria-sort="descending"]::before {
+  content: "↑";
+}
+
+th[aria-sort="ascending"]::before {
+  content: "↓";
+}
+

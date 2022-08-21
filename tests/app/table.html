@@ -35,7 +35,14 @@
       <table>
         <thead>
           <tr>
-            <th aria-sort="none">Column A</th>
+            <th aria-sort="none">
+              Column A
+              <button class="sort-indicator">
+                <svg width="18" height="16" viewBox="0 0 24 20">
+                  <path d="M8 7l6 6 6-6 2 2-8 8-8-8z" />
+                </svg>
+              </button>
+            </th>
             <th aria-sort="ascending">Column B</th>
             <th aria-sort="descending">Column C</th>
             <th>Column d</th>
@@ -227,7 +234,6 @@
     const SORT_NONE = "none";
     const SORT_ASCENDING = "ascending";
     const SORT_DESCENDING = "descending";
-    const SORT_OTHER = "other";
 
     const orderByCycle = {
       [SORT_NONE]: SORT_ASCENDING,
@@ -243,12 +249,8 @@
       );
     }
 
-    function makeSortable(node) {
-      node.onclick = toggleOrderBy;
-    }
-
     for (const e of document.querySelectorAll("th")) {
-      makeSortable(e);
+      e.onclick = toggleOrderBy;
     }
   </script>
 </html>
