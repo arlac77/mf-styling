@@ -24,7 +24,7 @@ jobs:
       - run: npm run cover --if-present
       - uses: actions/setup-node@v3.4.1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm cit
         env:
