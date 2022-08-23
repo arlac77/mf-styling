@@ -20,7 +20,8 @@
     "src/tab.css",
     "src/table-sort.css",
     "src/table.css",
-    "src/images/down.svg"
+    "src/images/down.svg",
+    "src/images/up.svg"
   ],
   "description": "css as used for mf apps",
   "keywords": [
