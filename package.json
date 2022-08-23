@@ -14,14 +14,14 @@
     "src/dropdown.css",
     "src/form.css",
     "src/global.css",
+    "src/images/down.svg",
+    "src/images/up.svg",
     "src/layout.css",
     "src/log.css",
     "src/nav.css",
     "src/tab.css",
     "src/table-sort.css",
-    "src/table.css",
-    "src/images/down.svg",
-    "src/images/up.svg"
+    "src/table.css"
   ],
   "description": "css as used for mf apps",
   "keywords": [
@@ -50,7 +50,7 @@
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "npm-pkgbuild": "^10.14.8",
-    "semantic-release": "^19.0.4",
+    "semantic-release": "^19.0.5",
     "stylelint": "^14.11.0",
     "stylelint-config-standard": "^28.0.0",
     "testcafe": "^1.20.1",
