@@ -272,6 +272,10 @@
 
     for (const e of document.querySelectorAll("th")) {
       e.onclick = toggleOrderBy;
+      const button = document.createElement("button");
+      const img = document.createElement("img");
+      button.appendChild(img);
+      e.appendChild(button);
     }
   </script>
 </html>

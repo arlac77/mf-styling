@@ -3,6 +3,7 @@
   background-color: var(--color-primary-400);
 }
 
+/*
 th[aria-sort]::before {
   float: right;
   margin-left: 0.5em;
@@ -20,24 +21,21 @@ th[aria-sort="descending"]::before {
 th[aria-sort="ascending"]::before {
   content: "↓";
 }
-
+*/
 
 th > button {
+  cursor: pointer;
+
   background: transparent;
   border: 1px solid transparent;
   color: inherit;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
   padding: 0.25em 0.5em 0.25em 1em;
-  white-space: nowrap;
   width: 100%;
   min-width: 4.5em;
   display: grid;
   grid-template-columns: minmax(2em, max-content) .65em auto;
   grid-template-areas: "t a x" "t d x";
 }
-
 
 [aria-sort="descending"] img {
    content: url(images/sort-descending.svg)
