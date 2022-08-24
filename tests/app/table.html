@@ -35,24 +35,9 @@
       <table>
         <thead>
           <tr>
-            <th aria-sort="none">
-              Column A
-              <button class="sort-indicator">
-                <img src="" />
-              </button>
-            </th>
-            <th aria-sort="ascending">
-              Column B
-              <button class="sort-indicator">
-                <img src="" />
-              </button>
-            </th>
-            <th aria-sort="none">
-              Column C
-              <button class="sort-indicator">
-                <img src="" />
-              </button>
-            </th>
+            <th aria-sort="none">Column A</th>
+            <th aria-sort="ascending">Column B</th>
+            <th aria-sort="none">Column C</th>
             <th>Column d</th>
           </tr>
         </thead>
@@ -251,16 +236,18 @@
 
     function toggleOrderBy(event) {
       const node = event.currentTarget;
-      node.setAttribute(
+      const th = node.parentElement;
+
+      th.setAttribute(
         "aria-sort",
-        orderByCycle[node.getAttribute("aria-sort")] || SORT_NONE
+        orderByCycle[th.getAttribute("aria-sort")] || SORT_NONE
       );
 
-      for (const peer of node.parentElement.children) {
+      for (const peer of th.parentElement.children) {
         let sort = peer.getAttribute("aria-sort");
 
         if (sort) {
-          if (peer !== node) {
+          if (peer !== th) {
             if (sort !== SORT_NONE) {
               sort = SORT_NONE;
               peer.setAttribute("aria-sort", sort);
@@ -270,12 +257,15 @@
       }
     }
 
-    for (const e of document.querySelectorAll("th")) {
-      e.onclick = toggleOrderBy;
-      const button = document.createElement("button");
-      const img = document.createElement("img");
-      button.appendChild(img);
-      e.appendChild(button);
+    for (const th of document.querySelectorAll("th")) {
+      if (th.getAttribute("aria-sort")) {
+        const button = document.createElement("button");
+        button.onclick = toggleOrderBy;
+
+        const img = document.createElement("img");
+        button.appendChild(img);
+        th.appendChild(button);
+      }
     }
   </script>
 </html>

@@ -1,33 +1,14 @@
 
 [aria-sort]:hover {
-  background-color: var(--color-primary-400);
+  background-color: var(--color-primary-300);
 }
-
-/*
-th[aria-sort]::before {
-  float: right;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  font-size: inherit;
-  line-height: inherit;
-  cursor: pointer;
-  content: "↕";
-}
-
-th[aria-sort="descending"]::before {
-  content: "↑";
-}
-
-th[aria-sort="ascending"]::before {
-  content: "↓";
-}
-*/
 
 th > button {
   cursor: pointer;
-
   background: transparent;
   border: 1px solid transparent;
+
+  /*
   color: inherit;
   padding: 0.25em 0.5em 0.25em 1em;
   width: 100%;
@@ -35,16 +16,21 @@ th > button {
   display: grid;
   grid-template-columns: minmax(2em, max-content) .65em auto;
   grid-template-areas: "t a x" "t d x";
+  */
 }
 
-[aria-sort="descending"] img {
+th > button:hover {
+  background-color: var(--color-primary-400);
+}
+
+[aria-sort="descending"] > button img {
    content: url(images/sort-descending.svg)
 }
 
-[aria-sort="ascending"] img {
+[aria-sort="ascending"] > button img {
   content: url(images/sort-ascending.svg)
 }
 
-[aria-sort="none"] img {
+[aria-sort="none"] > button img {
   content: url(images/sort-none.svg)
 }
