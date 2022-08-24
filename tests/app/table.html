@@ -38,12 +38,13 @@
             <th aria-sort="none">
               Column A
               <button class="sort-indicator">
-                <img src="images/down.svg"/>
+                <img src="images/down.svg" />
               </button>
             </th>
-            <th aria-sort="ascending">Column B
+            <th aria-sort="ascending">
+              Column B
               <button class="sort-indicator">
-                <img src="images/up.svg"/>
+                <img src="images/up.svg" />
               </button>
             </th>
             <th aria-sort="none">Column C</th>
@@ -240,7 +241,7 @@
     const orderByCycle = {
       [SORT_NONE]: SORT_ASCENDING,
       [SORT_ASCENDING]: SORT_DESCENDING,
-      [SORT_DESCENDING]: SORT_NONE
+      [SORT_DESCENDING]: SORT_ASCENDING
     };
 
     function toggleOrderBy(event) {
@@ -249,6 +250,19 @@
         "aria-sort",
         orderByCycle[node.getAttribute("aria-sort")] || SORT_NONE
       );
+
+      for (const peer of node.parentElement.children) {
+        let sort = peer.getAttribute("aria-sort");
+
+        if (sort) {
+          if (peer !== node) {
+            if (sort !== SORT_NONE) {
+              sort = SORT_NONE;
+              peer.setAttribute("aria-sort", sort);
+            }
+          }
+        }
+      }
     }
 
     for (const e of document.querySelectorAll("th")) {
