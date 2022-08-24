@@ -22,3 +22,15 @@ th[aria-sort="ascending"]::before {
   content: "↓";
 }
 
+
+th[aria-sort="descending"] img {
+   content: url(images/sort-descending.svg)
+}
+
+th[aria-sort="ascending"] img {
+  content: url(images/sort-ascending.svg)
+}
+
+th[aria-sort="none"] img {
+  content: url(images/sort-none.svg)
+}
