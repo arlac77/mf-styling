@@ -43,3 +43,7 @@ td {
   position: sticky;
   inset-block-end: 0;
 }
+
+th input:focus {
+  min-width: 100px;
+}
