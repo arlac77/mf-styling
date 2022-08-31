@@ -260,9 +260,13 @@
     for (const th of document.querySelectorAll("th")) {
       if (th.getAttribute("aria-sort")) {
         const button = document.createElement("button");
+        button.setAttribute("aria-label", `sortable ${th.id}`);
+
         button.onclick = toggleOrderBy;
 
         const img = document.createElement("img");
+        img.setAttribute("alt", "sorting order indicator");
+
         button.appendChild(img);
         th.appendChild(button);
       }
