@@ -6,6 +6,7 @@ th > button {
   cursor: pointer;
   background: transparent;
   border: 0;
+  padding: 0;
   margin-left: 6px;
   margin-right: 4px;
 }
