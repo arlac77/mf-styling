@@ -74,9 +74,11 @@
       <table class="bordered">
         <thead>
           <tr>
-            <th aria-sort="none">Column A<input type="text" placeholder="filter"/></th>
+            <th aria-sort="none">
+              Column A<input type="text" placeholder="filter" />
+            </th>
             <th aria-sort="ascending">Column B</th>
-            <th aria-sort="descending">Column C</th>
+            <th aria-sort="none">Column C</th>
             <th>Column d</th>
           </tr>
         </thead>
@@ -114,7 +116,7 @@
           <tr>
             <th aria-sort="none">Column A</th>
             <th aria-sort="ascending">Column B</th>
-            <th aria-sort="descending">Column C</th>
+            <th aria-sort="none">Column C</th>
             <th>Column d</th>
           </tr>
         </thead>
@@ -151,7 +153,7 @@
         <thead>
           <tr>
             <th aria-sort="none">Column A</th>
-            <th aria-sort="ascending">Column B</th>
+            <th aria-sort="none">Column B</th>
             <th aria-sort="descending">Column C</th>
             <th>Column d</th>
           </tr>
@@ -188,9 +190,9 @@
       <table class="bordered striped hoverable">
         <thead>
           <tr>
-            <th aria-sort="none">Column A</th>
-            <th aria-sort="ascending">Column B</th>
-            <th aria-sort="descending">Column C</th>
+            <th aria-sort="ascending">Column A</th>
+            <th aria-sort="none">Column B</th>
+            <th aria-sort="none">Column C</th>
             <th>Column d</th>
           </tr>
         </thead>
@@ -260,14 +262,9 @@
     for (const th of document.querySelectorAll("th")) {
       if (th.getAttribute("aria-sort")) {
         const button = document.createElement("button");
+        button.setAttribute("class", "alter-sorting");
         button.setAttribute("aria-label", `sortable ${th.id}`);
-
         button.onclick = toggleOrderBy;
-
-        const img = document.createElement("img");
-        img.setAttribute("alt", "sorting order indicator");
-
-        button.appendChild(img);
         th.appendChild(button);
       }
     }

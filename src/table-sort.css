@@ -1,27 +1,27 @@
-[aria-sort]:hover {
-  background-color: var(--color-primary-300);
-}
-
-th > button {
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  width: 22px;
-  height: 28px;
-}
-
 th > button:hover {
   background-color: var(--color-primary-400);
 }
 
-[aria-sort="descending"] > button img {
-  content: url("images/sort-descending.svg");
+[aria-sort]:hover {
+  background-color: var(--color-primary-300);
 }
 
-[aria-sort="ascending"] > button img {
-  content: url("images/sort-ascending.svg");
+th > .alter-sorting {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  width: 12px;
+  height: 18px;
 }
 
-[aria-sort="none"] > button img {
-  content: url("images/sort-none.svg");
+[aria-sort="descending"] > .alter-sorting {
+  background-image: url("images/sort-descending.svg");
+}
+
+[aria-sort="ascending"] > .alter-sorting {
+  background-image: url("images/sort-ascending.svg");
+}
+
+[aria-sort="none"] > .alter-sorting {
+  background-image: url("images/sort-none.svg");
 }
