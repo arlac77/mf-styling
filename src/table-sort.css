@@ -5,7 +5,9 @@
 th > button {
   cursor: pointer;
   background: transparent;
-  border: 1px solid transparent;
+  border: 0;
+  width: 22px;
+  height: 28px;
 }
 
 th > button:hover {
