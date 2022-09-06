@@ -2,33 +2,29 @@ th > button:hover {
   background-color: var(--color-primary-400);
 }
 
-th > button {
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  padding: 0;
-  margin-left: 6px;
-  margin-right: 4px;
-}
-
 [aria-sort]:hover {
   background-color: var(--color-primary-300);
 }
 
-[aria-sort="descending"] > .alter-sorting {
-  background-image: url("images/sort-descending.svg");
+.alter-sorting {
+  background: transparent;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-right: 4px;
   width: 12px;
   height: 18px;
+  border: 0;
+  padding: 0;
+}
+
+[aria-sort="descending"] > .alter-sorting {
+  background-image: url("images/sort-descending.svg");
 }
 
 [aria-sort="ascending"] > .alter-sorting {
   background-image: url("images/sort-ascending.svg");
-  width: 12px;
-  height: 18px;
 }
 
 [aria-sort="none"] > .alter-sorting {
   background-image: url("images/sort-none.svg");
-  width: 12px;
-  height: 18px;
 }
