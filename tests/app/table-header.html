@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="application-name" content="{{name}}" />
+    <meta name="apple-mobile-web-app-title" content="{{name}}" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>{{name}} {{version}} Table Headers</title>
+    <link rel="icon" href="images/icon.png" />
+    <link rel="apple-touch-icon" href="images/icon.png" />
+    <style>
+      th > button {
+        display: grid;
+        grid-template-columns: minmax(2em, max-content) 0.65em auto;
+        grid-template-areas: "t a x" "t d x";
+      }
+
+      th > button {
+        grid-area: t;
+        padding-right: 0.5em;
+      }
+
+      th > button > .asc {
+        grid-area: a;
+        align-self: center;
+      }
+
+      th > button > .des {
+        grid-area: d;
+        align-self: center;
+      }
+
+      th > button::after {
+        content: "";
+        grid-area: x;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th aria-sort="none">
+              <button>
+                Column A
+                <div class="sort asc" aria-hidden="true">A</div>
+                <div class="sort des" aria-hidden="true">B</div>
+              </button>
+            </th>
+            <th aria-sort="ascending">
+              <button>
+                Column B
+                <div class="sort asc" aria-hidden="true">A</div>
+                <div class="sort des" aria-hidden="true">B</div>
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cell A 1</td>
+            <td>Cell B 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
