@@ -12,28 +12,28 @@
     <link rel="icon" href="images/icon.png" />
     <link rel="apple-touch-icon" href="images/icon.png" />
     <style>
-      th > button {
+      th > .alter-sorting {
         display: grid;
         grid-template-columns: minmax(2em, max-content) 0.65em auto;
         grid-template-areas: "t a x" "t d x";
       }
 
-      th > button {
+      th > .alter-sorting {
         grid-area: t;
         padding-right: 0.5em;
       }
 
-      th > button > .asc {
+      th > .alter-sorting > .asc {
         grid-area: a;
         align-self: center;
       }
 
-      th > button > .des {
+      th > .alter-sorting > .des {
         grid-area: d;
         align-self: center;
       }
 
-      th > button::after {
+      th > .alter-sorting::after {
         content: "";
         grid-area: x;
       }
@@ -46,25 +46,31 @@
         <thead>
           <tr>
             <th aria-sort="none">
-              <button>
+              <button class="alter-sorting">
                 Column A
                 <div class="sort asc" aria-hidden="true">A</div>
                 <div class="sort des" aria-hidden="true">B</div>
               </button>
             </th>
             <th aria-sort="ascending">
-              <button>
+              <button class="alter-sorting">
                 Column B
                 <div class="sort asc" aria-hidden="true">A</div>
                 <div class="sort des" aria-hidden="true">B</div>
+              </button>
+            </th>
+            <th>
+              <button>
+                Column C
               </button>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Cell A 1</td>
-            <td>Cell B 1</td>
+            <td>A 1</td>
+            <td>B 1</td>
+            <td>C 1</td>
           </tr>
         </tbody>
       </table>
