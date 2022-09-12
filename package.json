@@ -97,11 +97,11 @@
           "assets": [
             {
               "path": "dist/*.deb",
-              "label": "Debian"
+              "label": "Debian Package"
             },
             {
               "path": "dist/*.pkg.*",
-              "label": "Arch"
+              "label": "Arch Linux Package"
             }
           ]
         }
