@@ -111,12 +111,6 @@
         {
           "publishCmd": "npx npm-pkgbuild --available --continue --verbose"
         }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assets": []
-        }
       ]
     ]
   },
