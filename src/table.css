@@ -13,7 +13,8 @@ th {
   font-weight: bold;
 }
 
-th, td {
+th,
+td {
   padding: var(--table-padding);
 }
 
