@@ -1,10 +1,9 @@
 :root {
-  --table-padding: 0.75rem;
+  --table-padding: 0.5rem;
 }
 
 table {
   width: 100%;
-  margin-bottom: 1rem;
   color: var(--color-primary-900);
   border-collapse: collapse;
 }
@@ -14,7 +13,6 @@ th {
   text-align: inherit;
   font-weight: bold;
   padding: var(--table-padding);
-  vertical-align: bottom;
 }
 
 td {

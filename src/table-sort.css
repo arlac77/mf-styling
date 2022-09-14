@@ -3,14 +3,13 @@
 }
 
 .alter-sorting {
-  cursor: pointer;
+  float: right;
   width: 12px;
   height: 18px;
-  margin: auto 4px auto 8px;
   border: 0;
   padding: 0;
   background-color: var(--color-primary-800);
-  float: right;
+  cursor: pointer;
 }
 
 .alter-sorting:hover {
