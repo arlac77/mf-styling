@@ -11,12 +11,10 @@ th {
   background-color: var(--color-primary-200);
   text-align: inherit;
   font-weight: bold;
-  padding: var(--table-padding);
 }
 
-td {
+th, td {
   padding: var(--table-padding);
-  vertical-align: top;
 }
 
 .bordered :is(td, th) {
