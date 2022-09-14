@@ -7,7 +7,7 @@
   width: 12px;
   height: 18px;
   border: 0;
-  padding: 0;
+  margin: auto 0 auto 8px;
   background-color: var(--color-primary-800);
   cursor: pointer;
 }
