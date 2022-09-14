@@ -7,6 +7,10 @@ fieldset {
   border: 0;
 }
 
+fieldset:disabled {
+  pointer-events: none;
+}
+
 label {
   font-size: 1.1rem;
 }
