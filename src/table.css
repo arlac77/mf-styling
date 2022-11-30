@@ -40,6 +40,10 @@ td {
   inset-block-end: 0;
 }
 
-th input:focus {
-  min-width: 200px;
+th > input {
+  margin: 0;
+}
+
+th > input:not(:focus) {
+  font-size: 0.5rem;
 }
