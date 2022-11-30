@@ -1,6 +1,3 @@
-[aria-sort]:hover {
-  background-color: var(--color-primary-300);
-}
 
 .alter-sorting {
   float: right;
@@ -8,13 +5,13 @@
   height: 18px;
   border: 0;
   padding: 0;
-  margin: auto 0 auto 6px;
+  margin: 2px 0 auto 6px;
   background-color: var(--color-primary-800);
   cursor: pointer;
 }
 
 .alter-sorting:hover {
-  background-color: var(--color-primary-900);
+  background-color: var(--color-primary-500);
 }
 
 [aria-sort="descending"] > .alter-sorting {
