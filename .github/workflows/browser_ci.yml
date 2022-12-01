@@ -10,7 +10,6 @@ jobs:
         os:
           - ubuntu-latest
         browser:
-          - chrome
           - firefox
         firefox:
           - latest
