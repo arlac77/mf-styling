@@ -27,6 +27,7 @@ export default defineConfig(async ({ command, mode }) => {
     "other",
     "tab",
     "table",
+    "table-header",
     "topnav"
   ];
 
