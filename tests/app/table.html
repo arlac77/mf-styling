@@ -4,13 +4,13 @@
     <meta charset="utf8" />
     {{html.base.href}}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="application-name" content="{{name}}">
-    <meta name="apple-mobile-web-app-title" content="{{name}}">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="{{name}}" />
+    <meta name="apple-mobile-web-app-title" content="{{name}}" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>{{name}} {{version}} Tables</title>
-    <link rel="icon" href="images/icon.png"/>
+    <link rel="icon" href="images/icon.png" />
     <link rel="apple-touch-icon" href="images/icon.png" />
     <link rel="stylesheet" href="/color-primary-fuchsia.css" />
     <link rel="stylesheet" href="/color.css" />
@@ -40,6 +40,10 @@
       <h1>Plain Table</h1>
 
       <table>
+        <colgroup>
+          <col style="background-color: --color-neutral-200" />
+          <col span="2" />
+        </colgroup>      
         <thead class="sticky">
           <tr>
             <th aria-sort="none">Column A</th>
@@ -50,10 +54,10 @@
         </thead>
         <tbody>
           <tr>
-            <td>Cell A 1</td>
+            <td>Cell D 1</td>
             <td>Cell B 1</td>
             <td>Cell C 1</td>
-            <td>Cell D 1</td>
+            <td>Cell A 1</td>
           </tr>
           <tr>
             <td>Cell A 2</td>
@@ -81,12 +85,10 @@
       <table class="bordered">
         <thead>
           <tr>
-            <th aria-sort="none">
-              Column A<input placeholder="filter" />
-            </th>
-            <th aria-sort="ascending">Column B<input/></th>
-            <th aria-sort="none">Column C<input/></th>
-            <th>Column D<input/></th>
+            <th aria-sort="none">Column A<input placeholder="filter" /></th>
+            <th aria-sort="ascending">Column B<input /></th>
+            <th aria-sort="none">Column C<input /></th>
+            <th>Column D<input /></th>
           </tr>
         </thead>
         <tbody>
@@ -246,6 +248,7 @@
     function toggleOrderBy(event) {
       const node = event.currentTarget;
       const th = node.parentElement;
+      const table = th.parentElement.parentElement.parentElement;
 
       th.setAttribute(
         "aria-sort",
@@ -260,6 +263,7 @@
             if (sort !== SORT_NONE) {
               sort = SORT_NONE;
               peer.setAttribute("aria-sort", sort);
+              sortTable(table);
             }
           }
         }
@@ -273,6 +277,32 @@
         button.setAttribute("aria-label", `sortable ${th.id}`);
         button.onclick = toggleOrderBy;
         th.appendChild(button);
+      }
+    }
+
+    function sortTable(table) {
+      let switching, i;
+      switching = true;
+      while (switching) {
+        switching = false;
+        const tbody = table.getElementsByTagName("tbody")[0];
+        const rows = tbody.children;
+
+        for (i = 1; i < rows.length - 1; i++) {
+          let shouldSwitch = false;
+          const x = rows[i].getElementsByTagName("TD")[0];
+          const xv = x.innerHTML.toLowerCase();
+          const y = rows[i + 1].getElementsByTagName("TD")[0];
+          const yv = y.innerHTML.toLowerCase();
+          if (xv > yv) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+        }
       }
     }
   </script>
