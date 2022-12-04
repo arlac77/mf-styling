@@ -12,30 +12,28 @@
     <link rel="icon" href="images/icon.png" />
     <link rel="apple-touch-icon" href="images/icon.png" />
     <style>
-      th > .alter-sorting {
+      th {
         display: grid;
-        grid-template-columns: minmax(2em, max-content) 0.65em auto;
-        grid-template-areas: "t a x" "t d x";
+        grid-template-areas:
+          "title sort"
+          "title filter";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 4rem;
       }
 
-      th > .alter-sorting {
-        grid-area: t;
-        padding-right: 0.5em;
+      th header {
+        grid-area: title;
+        background-color: #8ca0ff;
       }
 
-      th > .alter-sorting > .asc {
-        grid-area: a;
-        align-self: center;
+      th filter {
+        grid-area: filter;
+        background-color: #ffff64;
       }
 
-      th > .alter-sorting > .des {
-        grid-area: d;
-        align-self: center;
-      }
-
-      th > .alter-sorting::after {
-        content: "";
-        grid-area: x;
+      th sort {
+        grid-area: sort;
+        background-color: #8cffa0;
       }
     </style>
   </head>
@@ -45,32 +43,30 @@
       <table>
         <thead>
           <tr>
-            <th aria-sort="none">
-              <button class="alter-sorting">
-                Column A
-                <div class="sort asc" aria-hidden="true">A</div>
-                <div class="sort des" aria-hidden="true">B</div>
-              </button>
-            </th>
-            <th aria-sort="ascending">
-              <button class="alter-sorting">
-                Column B
-                <div class="sort asc" aria-hidden="true">A</div>
-                <div class="sort des" aria-hidden="true">B</div>
-              </button>
+            <th>
+              <div>
+                <header>Title</header>
+                <filter>Filter</filter>
+                <sort>Sort</sort>
+              </div>
             </th>
             <th>
-              <button>
-                Column C
-              </button>
+              <div>
+                <header>Title</header>
+                <filter>Filter</filter>
+                <sort>Sort</sort>
+              </div>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>A 1</td>
-            <td>B 1</td>
-            <td>C 1</td>
+            <td>1A</td>
+            <td>1B</td>
+          </tr>
+          <tr>
+            <td>2A</td>
+            <td>2B</td>
           </tr>
         </tbody>
       </table>
