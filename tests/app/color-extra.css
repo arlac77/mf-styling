@@ -42,7 +42,6 @@ div {
   background-color: var(--color-primary-900);
 }
 
-
 .cn50 {
   background-color: var(--color-neutral-50);
 }
@@ -83,7 +82,6 @@ div {
   background-color: var(--color-neutral-900);
 }
 
-
 .ca50 {
   background-color: var(--color-accent-50);
 }
@@ -123,7 +121,6 @@ div {
 .ca900 {
   background-color: var(--color-accent-900);
 }
-
 
 .cw50 {
   background-color: var(--color-warn-50);
