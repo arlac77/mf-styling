@@ -43,7 +43,7 @@
         <colgroup>
           <col style="background-color: --color-neutral-200" />
           <col span="2" />
-        </colgroup>      
+        </colgroup>
         <thead class="sticky">
           <tr>
             <th aria-sort="none">Column A</th>
@@ -250,20 +250,18 @@
       const th = node.parentElement;
       const table = th.parentElement.parentElement.parentElement;
 
-      th.setAttribute(
-        "aria-sort",
-        orderByCycle[th.getAttribute("aria-sort")] || SORT_NONE
-      );
+      const sort = orderByCycle[th.getAttribute("aria-sort")] || SORT_NONE;
+      th.setAttribute("aria-sort", sort);
+
+      sortTable(table, 0, sort, "string");
 
       for (const peer of th.parentElement.children) {
         let sort = peer.getAttribute("aria-sort");
-
         if (sort) {
           if (peer !== th) {
             if (sort !== SORT_NONE) {
               sort = SORT_NONE;
               peer.setAttribute("aria-sort", sort);
-              sortTable(table);
             }
           }
         }
@@ -280,30 +278,38 @@
       }
     }
 
-    function sortTable(table) {
-      let switching, i;
-      switching = true;
-      while (switching) {
-        switching = false;
-        const tbody = table.getElementsByTagName("tbody")[0];
-        const rows = tbody.children;
+    function sortTable(table, colNum, direction, type) {
+      const tbody = table.getElementsByTagName("tbody")[0];
 
-        for (i = 1; i < rows.length - 1; i++) {
-          let shouldSwitch = false;
-          const x = rows[i].getElementsByTagName("TD")[0];
-          const xv = x.innerHTML.toLowerCase();
-          const y = rows[i + 1].getElementsByTagName("TD")[0];
-          const yv = y.innerHTML.toLowerCase();
-          if (xv > yv) {
-            shouldSwitch = true;
-            break;
-          }
-        }
-        if (shouldSwitch) {
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-        }
+      let m = 1;
+
+      switch(direction) {
+        case SORT_ASCENDING:  m = 1; break;
+        case SORT_DESCENDING: m = -1; break;
       }
+
+      let compare;
+
+      switch (type) {
+        case "number":
+          compare = (rowA, rowB) =>
+            (rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML) * m;
+          break;
+
+        default:
+          compare = (rowA, rowB) =>
+            rowA.cells[colNum].innerHTML > rowB.cells[colNum].innerHTML
+              ? 1 * m
+              : -1 * m;
+
+          break;
+      }
+
+      let rows = Array.from(tbody.rows);
+
+      rows.sort(compare);
+
+      tbody.append(...rows);
     }
   </script>
 </html>
