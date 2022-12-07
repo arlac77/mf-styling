@@ -92,12 +92,6 @@
         }
       ],
       [
-        "@semantic-release/exec",
-        {
-          "publishCmd": "npx npm-pkgbuild --available --continue"
-        }
-      ],
-      [
         "@semantic-release/github",
         {
           "assets": [
@@ -110,12 +104,6 @@
               "label": "Arch Linux Package"
             }
           ]
-        }
-      ],
-      [
-        "@semantic-release/exec",
-        {
-          "publishCmd": "npx npm-pkgbuild --available --continue --verbose"
         }
       ]
     ]
