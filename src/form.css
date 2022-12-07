@@ -16,7 +16,6 @@ label {
 }
 
 input {
-  display: block;
   height: calc(1.25em + 0.75rem);
   margin-bottom: 0.5rem;
   padding: 0.25rem 0.5rem;
