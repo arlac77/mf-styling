@@ -9,7 +9,6 @@ table {
 
 th {
   background-color: var(--color-primary-200);
-  text-align: inherit;
   font-weight: bold;
 }
 
@@ -41,7 +40,9 @@ td {
 }
 
 th > input {
-  margin: 0;
+  margin: 0.2rem;
+  padding: 0.1rem;
+  border: 0;
 }
 
 th > input:not(:focus) {
