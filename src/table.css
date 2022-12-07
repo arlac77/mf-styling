@@ -43,6 +43,7 @@ th > input {
   margin: 0.2rem;
   padding: 0.1rem;
   border: 0;
+  border-radius: 0;
 }
 
 th > input:not(:focus) {
