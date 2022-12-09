@@ -48,6 +48,8 @@
                   type="text"
                   placeholder="Username"
                   name="username"
+                  minlength="2"
+                  maxlength="100"
                   size="40"
                   required
                 />
@@ -59,6 +61,8 @@
                   type="password"
                   placeholder="Password"
                   name="password"
+                  minlength="6"
+                  maxlength="100"
                   size="40"
                   required
                 />
@@ -72,35 +76,27 @@
                   type="text"
                   placeholder="Optional"
                   name="optional"
-                  size="40"
+                  size="20"
                   optional
                 />
               </label>
-              <label for="not_required">
-                Not required
-                <input
-                  id="not_required"
-                  type="text"
-                  placeholder="Not required"
-                  name="not_required"
-                  size="40"
-                />
-              </label>
-              <label for="invalid">
+              <label for="invalid_input">
                 Invalid
                 <input
-                  id="invalid"
+                  id="invalid_input"
                   type="text"
                   placeholder="invalid"
                   name="invalid"
-                  size="40"
-                  invalid
+                  pattern="\d*"
+                  minlength="2"
+                  maxlength="20"
+                  size="20"
                 />
               </label>
             </fieldset>
             <fieldset>
               <label for="disabled">
-                Disabled
+                Optional + Disabled
                 <input
                   disabled
                   id="disabled"
@@ -242,12 +238,10 @@
   <script defer>
     const toggleSpinner = event => {
       const button = event.currentTarget;
-      let text = button.innerHTML;
-      if (text.match(/spinner/)) {
-        button.innerHTML = text.replace(/<.*/, "");
-      } else {
-        button.innerHTML = text + '<div class="spinner" />';
-      }
+      const text = button.innerHTML;
+      button.innerHTML = text.match(/spinner/)
+        ? text.replace(/<.*/, "")
+        : text + '<div class="spinner" />';
     };
 
     document.getElementById("button1").onclick = toggleSpinner;
