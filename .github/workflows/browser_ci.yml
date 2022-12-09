@@ -15,7 +15,7 @@ jobs:
         firefox:
           - latest
         chrome:
-          - latest
+          - beta
     steps:
       - uses: browser-actions/setup-chrome@latest
         with:
