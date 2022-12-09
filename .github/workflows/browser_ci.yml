@@ -15,14 +15,8 @@ jobs:
         firefox:
           - latest
         chrome:
-          - beta
+          - stable
     steps:
-      - uses: browser-actions/setup-chrome@latest
-        with:
-          chrome-version: ${{ matrix.chrome }}
-      - uses: browser-actions/setup-firefox@latest
-        with:
-          firefox-version: ${{ matrix.firefox }}
       - uses: actions/checkout@v3
       - name: Build / Test Node ${{ matrix.node-version }}
         uses: actions/setup-node@v3.5.1
@@ -34,6 +28,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
+      - uses: browser-actions/setup-firefox@latest
+        with:
+          firefox-version: ${{ matrix.firefox }}
+      - uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: ${{ matrix.chrome }}
       - run: npm cit
         env:
           BROWSER: ${{ matrix.browser }}
