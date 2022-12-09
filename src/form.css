@@ -37,7 +37,11 @@ input:disabled {
 }
 
 input:invalid {
-  background-color: var(--color-warn-50-80);
+  background-color: var(--color-warn-200-80);
+}
+
+input:focus:invalid {
+  background-color: var(--color-warn-300-80);
 }
 
 input:optional {
