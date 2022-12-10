@@ -8,3 +8,4 @@ doc
 pkg
 *.map
 .stylelintrc.json
+dist
