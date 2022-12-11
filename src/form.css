@@ -40,16 +40,16 @@ input:invalid {
   background-color: var(--color-warn-200-80);
 }
 
-input:focus:invalid {
-  background-color: var(--color-warn-300-80);
-}
-
 input:optional {
   background-color: var(--color-neutral-100);
 }
 
 input:required {
   background-color: var(--color-neutral-300);
+}
+
+input:focus:invalid {
+  background-color: var(--color-warn-300-80);
 }
 
 .modal {
