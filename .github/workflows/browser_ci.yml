@@ -10,6 +10,7 @@ jobs:
         os:
           - ubuntu-latest
         browser:
+          - chrome
           - firefox
         firefox:
           - latest
@@ -28,6 +29,10 @@ jobs:
       - uses: browser-actions/setup-chrome@latest
         with:
           chrome-version: ${{ matrix.chrome }}
+      - uses: actions/setup-node@v3.5.1
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
       - run: npm cit
         env:
           BROWSER: ${{ matrix.browser }}
