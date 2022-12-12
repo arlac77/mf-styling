@@ -46,10 +46,10 @@
         </colgroup>
         <thead class="sticky">
           <tr>
-            <th aria-sort="none">Column A</th>
-            <th aria-sort="ascending">Column B</th>
-            <th aria-sort="none">Column C</th>
-            <th>Column D</th>
+            <th id="0" aria-sort="none">Column A</th>
+            <th id="1" aria-sort="ascending">Column B</th>
+            <th id="2" aria-sort="none">Column C</th>
+            <th id="3">Column D</th>
           </tr>
         </thead>
         <tbody>
@@ -85,10 +85,10 @@
       <table class="bordered">
         <thead>
           <tr>
-            <th aria-sort="none">Column A<input placeholder="filter" /></th>
-            <th aria-sort="ascending">Column B<input /></th>
-            <th aria-sort="none">Column C<input /></th>
-            <th>Column D<input /></th>
+            <th id="0" aria-sort="none">Column A<input placeholder="filter" /></th>
+            <th id="1" aria-sort="ascending">Column B<input /></th>
+            <th id="2" aria-sort="none">Column C<input /></th>
+            <th id="3">Column D<input /></th>
           </tr>
         </thead>
         <tbody>
@@ -123,10 +123,10 @@
       <table class="striped">
         <thead>
           <tr>
-            <th aria-sort="none">Column A</th>
-            <th aria-sort="ascending">Column B</th>
-            <th aria-sort="none">Column C</th>
-            <th>Column D</th>
+            <th id="0" aria-sort="none">Column A</th>
+            <th id="1" aria-sort="ascending">Column B</th>
+            <th id="2" aria-sort="none">Column C</th>
+            <th id="3">Column D</th>
           </tr>
         </thead>
         <tbody>
@@ -161,10 +161,10 @@
       <table class="hoverable">
         <thead>
           <tr>
-            <th aria-sort="none">Column A</th>
-            <th aria-sort="none">Column B</th>
-            <th aria-sort="descending">Column C</th>
-            <th>Column D</th>
+            <th id="0" aria-sort="none">Column A</th>
+            <th id="1" aria-sort="none">Column B</th>
+            <th id="2" aria-sort="descending">Column C</th>
+            <th id="3">Column D</th>
           </tr>
         </thead>
         <tbody>
@@ -199,10 +199,10 @@
       <table class="bordered striped hoverable">
         <thead>
           <tr>
-            <th aria-sort="ascending">Column A</th>
-            <th aria-sort="none">Column B</th>
-            <th aria-sort="none">Column C</th>
-            <th>Column D</th>
+            <th id="0" aria-sort="ascending">Column A</th>
+            <th id="1" aria-sort="none">Column B</th>
+            <th id="2" aria-sort="none">Column C</th>
+            <th id="3">Column D</th>
           </tr>
         </thead>
         <tbody>
@@ -253,7 +253,7 @@
       const sort = orderByCycle[th.getAttribute("aria-sort")] || SORT_NONE;
       th.setAttribute("aria-sort", sort);
 
-      sortTable(table, 0, sort, "string");
+      sortTable(table, parseInt(th.id), sort, "string");
 
       for (const peer of th.parentElement.children) {
         let sort = peer.getAttribute("aria-sort");
