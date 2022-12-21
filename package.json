@@ -1,6 +1,9 @@
 {
   "name": "mf-styling",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "src/button.css",
     "src/card.css",
