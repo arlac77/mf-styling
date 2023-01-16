@@ -54,7 +54,7 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "npm-pkgbuild": "^10.18.2",
+    "npm-pkgbuild": "^10.19.7",
     "semantic-release": "^20.0.2",
     "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
@@ -62,7 +62,7 @@
     "vite": "^4.0.4"
   },
   "optionalDependencies": {
-    "mf-hosting": "^1.8.2"
+    "mf-hosting-frontend": "^1.0.3"
   },
   "repository": {
     "type": "git",
@@ -74,14 +74,11 @@
   "homepage": "https://github.com/arlac77/mf-styling#readme",
   "pkgbuild": {
     "content": {
-      "${install.dir}": [
-        {
-          "base": "build"
-        }
-      ],
+      "${install.dir}": "build/",
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
-    "groups": "examples"
+    "example": true,
+    "frontend": true
   },
   "release": {
     "plugins": [
@@ -112,11 +109,6 @@
     ]
   },
   "template": {
-    "properties": {
-      "web-app": {
-        "publish": "build"
-      }
-    },
     "inheritFrom": [
       "arlac77/template-css",
       "arlac77/template-pacman",
