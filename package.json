@@ -54,7 +54,7 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "npm-pkgbuild": "^11.1.2",
+    "npm-pkgbuild": "^11.1.4",
     "semantic-release": "^20.0.2",
     "stylelint": "^14.16.1",
     "stylelint-config-standard": "^29.0.0",
@@ -74,7 +74,8 @@
   "homepage": "https://github.com/arlac77/mf-styling#readme",
   "pkgbuild": {
     "content": {
-      "${install.dir}": "build/"
+      "${install.dir}": "build/",
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
     "example": true,
     "frontend": true
