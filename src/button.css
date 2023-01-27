@@ -67,14 +67,15 @@ button + .failed {
 
   opacity: 1;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
+
   border: var(--border) solid var(--color-neutral-100);
   border-top: var(--border) solid var(--color-accent-600);
   border-radius: 100%;
   height: var(--size);
   width: var(--size);
   animation: spin 2s linear infinite;
-  margin: 0 0 3px 5px;
+  margin: 0 0 0 5px;
   padding: var(--size);
   transition: all var(--transition-time) ease;
 }
