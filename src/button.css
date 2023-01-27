@@ -74,7 +74,7 @@ button + .failed {
   height: var(--size);
   width: var(--size);
   animation: spin 2s linear infinite;
-  margin: 0 0 0 5px;
+  margin: 0 0 3px 5px;
   padding: var(--size);
   transition: all var(--transition-time) ease;
 }
