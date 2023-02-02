@@ -20,8 +20,6 @@ export default defineConfig(async ({ command, mode }) => {
   process.env["VITE_DESCRIPTION"] = properties.description;
   process.env["VITE_VERSION"] = properties.version;
 
-  const open = process.env.CI ? {} : { open: base };
-
   const entries = [
     "card",
     "color",
@@ -55,6 +53,6 @@ export default defineConfig(async ({ command, mode }) => {
       minify: true,
       sourcemap: true
     },
-    server: { host: true, ...open }
+    server: { host: true }
   };
 });
