@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { extractFromPackage } from "npm-pkgbuild";
-import { resolve } from "path";
+import { resolve } from "node:path";
+import { readdir } from "node:fs/promises";
 
 export default defineConfig(async ({ command, mode }) => {
   const res = extractFromPackage(
@@ -20,18 +21,9 @@ export default defineConfig(async ({ command, mode }) => {
   process.env["VITE_DESCRIPTION"] = properties.description;
   process.env["VITE_VERSION"] = properties.version;
 
-  const entries = [
-    "card",
-    "color",
-    "form",
-    "index",
-    "modal",
-    "other",
-    "tab",
-    "table",
-    "table-header",
-    "topnav"
-  ];
+  const entries = (
+    await readdir(new URL("./tests/app", import.meta.url).pathname)
+  ).filter(n => n.match(/.html/));
 
   return {
     publicDir: "../../src",
@@ -42,7 +34,7 @@ export default defineConfig(async ({ command, mode }) => {
       rollupOptions: {
         input: {
           ...Object.fromEntries(
-            entries.map(e => [e, resolve(__dirname, `tests/app/${e}.html`)])
+            entries.map(e => [e, resolve(__dirname, `tests/app/${e}`)])
           )
         }
       },
