@@ -68,7 +68,6 @@ button + .failed {
   opacity: 1;
   display: inline-block;
   vertical-align: baseline;
-
   border: var(--border) solid var(--color-neutral-100);
   border-top: var(--border) solid var(--color-accent-600);
   border-radius: 100%;
