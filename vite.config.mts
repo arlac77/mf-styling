@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
-import { extractFromPackage } from "npm-pkgbuild";
 import { resolve } from "node:path";
 import { readdir } from "node:fs/promises";
+import { extractFromPackage } from "npm-pkgbuild";
 
 export default defineConfig(async ({ command, mode }) => {
   const res = extractFromPackage(

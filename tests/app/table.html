@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf8" />
-    {{html.base.href}}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="application-name" content="{{name}}" />
     <meta name="apple-mobile-web-app-title" content="{{name}}" />
@@ -37,8 +36,7 @@
       </ul>
     </nav>
     <main>
-      <h1>Plain Table</h1>
-
+      <h2>Plain Table</h2>
       <table>
         <colgroup>
           <col style="background-color: --color-neutral-200" />
@@ -80,12 +78,13 @@
         </tbody>
       </table>
 
-      <h1>Bordered</h1>
-
+      <h2>Bordered</h2>
       <table class="bordered">
         <thead>
           <tr>
-            <th id="0" aria-sort="none">Column A<input placeholder="filter" /></th>
+            <th id="0" aria-sort="none">
+              Column A<input placeholder="filter" />
+            </th>
             <th id="1" aria-sort="ascending">Column B<input /></th>
             <th id="2" aria-sort="none">Column C<input /></th>
             <th id="3">Column D<input /></th>
@@ -118,8 +117,7 @@
           </tr>
         </tbody>
       </table>
-      <h1>Striped</h1>
-
+      <h2>Striped</h2>
       <table class="striped">
         <thead>
           <tr>
@@ -157,7 +155,7 @@
         </tbody>
       </table>
 
-      <h1>Hoverable</h1>
+      <h2>Hoverable</h2>
       <table class="hoverable">
         <thead>
           <tr>
@@ -195,7 +193,7 @@
         </tbody>
       </table>
 
-      <h1>All Togeter</h1>
+      <h2>All Togeter</h2>
       <table class="bordered striped hoverable">
         <thead>
           <tr>
@@ -283,9 +281,13 @@
 
       let m = 1;
 
-      switch(direction) {
-        case SORT_ASCENDING:  m = 1; break;
-        case SORT_DESCENDING: m = -1; break;
+      switch (direction) {
+        case SORT_ASCENDING:
+          m = 1;
+          break;
+        case SORT_DESCENDING:
+          m = -1;
+          break;
       }
 
       let compare;
