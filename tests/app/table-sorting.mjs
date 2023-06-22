@@ -8,35 +8,37 @@ const orderByCycle = {
   [SORT_DESCENDING]: SORT_ASCENDING
 };
 
-export function toggleOrderBy(event) {
-  const node = event.currentTarget;
-  const th = node.parentElement;
-  const table = th.parentElement.parentElement.parentElement;
+export function toggleSorting(sorter) {
+  return event => {
+    const node = event.currentTarget;
+    const th = node.parentElement;
+    const table = th.parentElement.parentElement.parentElement;
 
-  const sort = orderByCycle[th.getAttribute("aria-sort")] || SORT_NONE;
-  th.setAttribute("aria-sort", sort);
+    const sort = orderByCycle[th.getAttribute("aria-sort")] || SORT_NONE;
+    th.setAttribute("aria-sort", sort);
 
-  sortTable(table, parseInt(th.id), sort, "string");
+    sorter(table, parseInt(th.id), sort, "string");
 
-  for (const peer of th.parentElement.children) {
-    let sort = peer.getAttribute("aria-sort");
-    if (sort) {
-      if (peer !== th) {
-        if (sort !== SORT_NONE) {
-          sort = SORT_NONE;
-          peer.setAttribute("aria-sort", sort);
+    for (const peer of th.parentElement.children) {
+      let sort = peer.getAttribute("aria-sort");
+      if (sort) {
+        if (peer !== th) {
+          if (sort !== SORT_NONE) {
+            sort = SORT_NONE;
+            peer.setAttribute("aria-sort", sort);
+          }
         }
       }
     }
-  }
+  };
 }
 
-export function enableSorting(th) {
+export function enableSorting(th, sorter = sortTable) {
   if (th.getAttribute("aria-sort")) {
     const button = document.createElement("button");
     button.setAttribute("class", "alter-sorting");
     button.setAttribute("aria-label", `sortable ${th.id}`);
-    button.onclick = toggleOrderBy;
+    button.onclick = toggleSorting(sorter);
     th.appendChild(button);
   }
 }
