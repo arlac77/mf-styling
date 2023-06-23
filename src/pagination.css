@@ -1,0 +1,12 @@
+
+[aria-label="pagination"] a {
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: var(--color-primary-400);
+  padding: 0.1rem 0.2rem;
+  margin: 1px;
+}
+
+[aria-current="page"] {
+  cursor: not-allowed;
+}
