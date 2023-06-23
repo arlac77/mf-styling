@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/nav.css" />
     <link rel="stylesheet" href="/table.css" />
     <link rel="stylesheet" href="/table-sort.css" />
+    <link rel="stylesheet" href="/pagination.css" />
     <script type="module">
       import { enableSorting } from "./table-sorting.mjs";
 
@@ -241,6 +242,17 @@
             <td>Cell D 4</td>
           </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              <nav aria-label="pagination">
+                <a aria-current="page" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+              </nav>    
+            </td>
+          </tr>
+        </tfoot>
       </table>
     </main>
   </body>
