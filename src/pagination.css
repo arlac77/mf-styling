@@ -2,9 +2,7 @@
 [aria-label="pagination"] a {
   text-align: center;
   text-decoration: none;
-  margin: var(--button-margin) var(--button-margin);
   border: solid 1px transparent;
-  border-radius: var(--border-radius);
   color: var(--color-neutral-100);
   background-color: var(--color-primary-600);
   vertical-align: middle;
@@ -12,8 +10,26 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.3;
+  float: left;
+  margin: var(--button-margin) 0 var(--button-margin) 0;
+  border-radius: 0;
+}
+
+[aria-label="pagination"] a:is(:first-child) {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  margin: var(--button-margin) 0 var(--button-margin) var(--button-margin);
+}
+
+[aria-label="pagination"] a::is(:last-child) {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  margin: var(--button-margin) var(--button-margin) var(--button-margin) 0;
 }
 
 [aria-current="page"] {
-  cursor: not-allowed;
+  pointer-events: none;
+}
+
+[aria-label="pagination"] a:disabled {
+  background-color: var(--color-primary-300);
+  pointer-events: none;
 }

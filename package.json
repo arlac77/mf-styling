@@ -20,6 +20,7 @@
     "src/layout.css",
     "src/log.css",
     "src/nav.css",
+    "src/main-nav.css",
     "src/tab.css",
     "src/table-sort.css",
     "src/table.css",
