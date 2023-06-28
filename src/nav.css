@@ -2,6 +2,10 @@
   --nav-side-padding: 12px;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 nav ::after {
   clear: both;
 }

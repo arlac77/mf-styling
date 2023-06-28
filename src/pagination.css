@@ -1,7 +1,6 @@
 
 [aria-label="pagination"] a {
   text-align: center;
-  text-decoration: none;
   border: solid 1px transparent;
   color: var(--color-neutral-100);
   background-color: var(--color-primary-600);
