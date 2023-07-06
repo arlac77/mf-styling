@@ -56,12 +56,12 @@
     "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^11.0.4",
-    "npm-pkgbuild": "^11.8.11",
+    "npm-pkgbuild": "^11.8.12",
     "semantic-release": "^21.0.7",
-    "stylelint": "^15.10.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^34.0.0",
     "testcafe": "^3.0.1",
-    "vite": "^4.3.9"
+    "vite": "^4.4.0"
   },
   "optionalDependencies": {
     "mf-hosting-frontend": "^1.9.5"
