@@ -19,7 +19,7 @@
   margin: var(--button-margin) 0 var(--button-margin) var(--button-margin);
 }
 
-[aria-label="pagination"] a::is(:last-child) {
+[aria-label="pagination"] a:is(:last-child) {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   margin: var(--button-margin) var(--button-margin) var(--button-margin) 0;
 }
