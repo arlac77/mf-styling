@@ -22,10 +22,41 @@
     <link rel="stylesheet" href="/pagination.css" />
     <script type="module">
       import { enableSorting } from "./table-sorting.mjs";
+      import { Pagination, pageNavigation } from "./pagination.mjs";
 
       for (const th of document.querySelectorAll("th")) {
         enableSorting(th);
       }
+
+      const data = [];
+      for (let i = 1; i < 50; i++) {
+        data.push({
+          a: "Cell A " + i,
+          b: "Cell B " + i,
+          c: "Cell C " + i,
+          d: "Cell D " + i
+        });
+      }
+
+      const pg = new Pagination(data);
+
+      pg.subscribe(p => {
+        const rows = [];
+        for (const d of p) {
+          const tr = document.createElement("tr");
+          for (const c of ["a", "b", "c", "d"]) {
+            const td = document.createElement("td");
+            td.textContent = d[c];
+            tr.appendChild(td);
+          }
+          rows.push(tr);
+        }
+
+        const tb = document.getElementById("tb");
+        tb.replaceChildren(...rows);
+      });
+
+      pageNavigation(document.getElementById("tn"), pg);
     </script>
   </head>
   <body>
@@ -217,44 +248,10 @@
             <th id="3">Column D</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Cell A 1</td>
-            <td>Cell B 1</td>
-            <td>Cell C 1</td>
-            <td>Cell D 1</td>
-          </tr>
-          <tr>
-            <td>Cell A 2</td>
-            <td>Cell B 2</td>
-            <td>Cell C 2</td>
-            <td>Cell D 2</td>
-          </tr>
-          <tr>
-            <td>Cell A 3</td>
-            <td>Cell B 3</td>
-            <td>Cell C 3</td>
-            <td>Cell D 3</td>
-          </tr>
-          <tr>
-            <td>Cell A 4</td>
-            <td>Cell B 4</td>
-            <td>Cell C 4</td>
-            <td>Cell D 4</td>
-          </tr>
-        </tbody>
+        <tbody id="tb"></tbody>
         <tfoot>
           <tr>
-            <td colspan="4">
-              <nav aria-label="pagination">
-                <a href="#" disabled>&lt;&lt;</a>
-                <a href="#" disabled>&lt;</a>
-                <a aria-current="page" href="#" disabled>1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">&gt;</a>
-                <a href="#">&gt;&gt;</a></nav>    
-            </td>
+            <td id="tn" colspan="4"></td>
           </tr>
         </tfoot>
       </table>
