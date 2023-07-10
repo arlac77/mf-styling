@@ -15,12 +15,15 @@
 
 [aria-sort="descending"] > .alter-sorting {
   mask-image: url("images/sort-descending.svg");
+  -webkit-mask-image: url("images/sort-descending.svg");
 }
 
 [aria-sort="ascending"] > .alter-sorting {
   mask-image: url("images/sort-ascending.svg");
+  -webkit-mask-image: url("images/sort-ascending.svg");
 }
 
 [aria-sort="none"] > .alter-sorting {
   mask-image: url("images/sort-none.svg");
+  -webkit-mask-image: url("images/sort-none.svg");
 }
