@@ -6,7 +6,7 @@ nav a {
   text-decoration: none;
 }
 
-nav a[aria-disabled=true] {
+nav a[aria-disabled="true"] {
   opacity: 0.5;
 }
 
