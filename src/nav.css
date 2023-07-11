@@ -2,16 +2,16 @@
   --nav-side-padding: 12px;
 }
 
+nav ::after {
+  clear: both;
+}
+
 nav a {
   text-decoration: none;
 }
 
 nav a[aria-disabled="true"] {
   opacity: 0.5;
-}
-
-nav ::after {
-  clear: both;
 }
 
 nav ul a {
