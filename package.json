@@ -56,13 +56,13 @@
     "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^11.0.4",
-    "npm-pkgbuild": "^11.8.14",
+    "autoprefixer": "^10.4.14",
+    "npm-pkgbuild": "^11.9.0",
     "semantic-release": "^21.0.7",
     "stylelint": "^15.10.1",
     "stylelint-config-standard": "^34.0.0",
     "testcafe": "^3.0.1",
-    "vite": "^4.4.2",
-    "autoprefixer": "^10.4.14"
+    "vite": "^4.4.4"
   },
   "optionalDependencies": {
     "mf-hosting-frontend": "^1.10.0"
@@ -87,14 +87,6 @@
     },
     "example": true,
     "frontend": true
-  },
-  "browserslist": [
-    "last 1 version"
-  ],
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
   },
   "release": {
     "plugins": [
@@ -152,5 +144,13 @@
       "arlac77/template-vite",
       "arlac77/template-web-app"
     ]
+  },
+  "browserslist": [
+    "last 1 version"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   }
 }
