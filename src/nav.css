@@ -20,6 +20,11 @@ nav ul a {
   font-size: 1.17em;
 }
 
+nav [aria-disabled="true"],
+a:disabled {
+  pointer-events: none;
+}
+
 nav a.active,
 nav a:focus,
 nav a:hover {
