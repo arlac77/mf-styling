@@ -147,10 +147,5 @@
   },
   "browserslist": [
     "last 1 version"
-  ],
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  }
+  ]
 }
