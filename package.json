@@ -17,10 +17,6 @@
     "src/dropdown.css",
     "src/form.css",
     "src/global.css",
-    "src/images/down.svg",
-    "src/images/sort-ascending.svg",
-    "src/images/sort-descending.svg",
-    "src/images/sort-none.svg",
     "src/layout.css",
     "src/log.css",
     "src/main-nav.css",
@@ -28,7 +24,11 @@
     "src/pagination.css",
     "src/tab.css",
     "src/table-sort.css",
-    "src/table.css"
+    "src/table.css",
+    "src/images/down.svg",
+    "src/images/sort-ascending.svg",
+    "src/images/sort-descending.svg",
+    "src/images/sort-none.svg"
   ],
   "description": "css as used for mf apps",
   "keywords": [
@@ -62,7 +62,8 @@
     "stylelint": "^15.10.2",
     "stylelint-config-standard": "^34.0.0",
     "testcafe": "^3.1.0",
-    "vite": "^4.4.7"
+    "vite": "^4.4.7",
+    "vite-plugin-compression2": "^0.10.3"
   },
   "optionalDependencies": {
     "mf-hosting-frontend": "^2.0.0"

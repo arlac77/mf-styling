@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "node:path";
 import { readdir } from "node:fs/promises";
+import { compression } from "vite-plugin-compression2";
 import { extractFromPackage } from "npm-pkgbuild";
 
 export default defineConfig(async ({ command, mode }) => {
@@ -15,7 +16,6 @@ export default defineConfig(async ({ command, mode }) => {
   const pkg = first.value;
   const properties = pkg.properties;
   const base = properties["http.path"];
-  const production = mode === "production";
 
   process.env["VITE_NAME"] = properties.name;
   process.env["VITE_DESCRIPTION"] = properties.description;
@@ -28,8 +28,14 @@ export default defineConfig(async ({ command, mode }) => {
   return {
     publicDir: "../../src",
     base,
-
     root: "tests/app",
+    /*plugins: [
+      compression({
+        algorithm: "brotliCompress",
+        exclude: [/\.(br)$/, /\.(gz)$/, /\.(png)$/, /\.(jpg)$/],
+        threshold: 500
+      })
+    ],*/
     build: {
       rollupOptions: {
         input: {
