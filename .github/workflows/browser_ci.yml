@@ -30,14 +30,14 @@ jobs:
           firefox-version: ${{ matrix.firefox }}
       - uses: actions/checkout@v3
       - name: Build / Test Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v3.7.0
+        uses: actions/setup-node@v3.8.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
       - uses: browser-actions/setup-chrome@latest
         with:
           chrome-version: ${{ matrix.chrome }}
-      - uses: actions/setup-node@v3.7.0
+      - uses: actions/setup-node@v3.8.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
@@ -66,7 +66,7 @@ jobs:
 
           sudo apt-get install -f ./pacman-utils_5.2.2-3_amd64.deb
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3.7.0
+      - uses: actions/setup-node@v3.8.0
         with:
           node-version: 18.17.1
           cache: npm
