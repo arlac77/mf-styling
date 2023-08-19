@@ -22,10 +22,13 @@ export class Pagination {
     Object.assign(this, options);
   }
 
+  fireSubscriptions() {
+    this.#subscriptions.forEach(subscription => subscription(this));
+  }
+
   set filter(filter) {
     this.#filter = filter;
-
-    this.#subscriptions.forEach(subscription => subscription(this));
+    this.fireSubscriptions();
   }
 
   get filter() {
@@ -34,8 +37,7 @@ export class Pagination {
 
   set sorter(sorter) {
     this.#sorter = sorter;
-
-    this.#subscriptions.forEach(subscription => subscription(this));
+    this.fireSubscriptions();
   }
 
   get sorter() {
@@ -51,12 +53,18 @@ export class Pagination {
     if (data?.subscribe) {
       this.#unsubscribeData = data.subscribe(newData => {
         this.#data = newData;
+        if (this.page > this.numberOfPages) {
+          this.page = this.numberOfPages;
+        }
       });
     } else {
       this.#data = data;
+      if (this.page > this.numberOfPages) {
+        this.page = this.numberOfPages;
+      }
     }
 
-    this.#subscriptions.forEach(subscription => subscription(this));
+    this.fireSubscriptions();
   }
 
   get itemsPerPage() {
@@ -65,7 +73,7 @@ export class Pagination {
 
   set itemsPerPage(n) {
     this.#itemsPerPage = n;
-    this.#subscriptions.forEach(subscription => subscription(this));
+    this.fireSubscriptions();
   }
 
   /**
@@ -73,14 +81,14 @@ export class Pagination {
    * @param {number} n
    */
   set page(n) {
-    if(n < 0) {
+    if (n < 0) {
       n = this.numberOfPages + n + 1;
     }
 
     if (this.#page !== n) {
       if (n >= 1 && n <= this.numberOfPages) {
         this.#page = n;
-        this.#subscriptions.forEach(subscription => subscription(this));
+        this.fireSubscriptions();
       }
     }
   }
@@ -147,7 +155,21 @@ export class Pagination {
    */
   get pageNavigationElement() {
     const nav = document.createElement("nav");
+    nav.setAttribute("tabindex", "0");
     nav.setAttribute("aria-label", "pagination");
+
+    nav.onkeyup = event => {
+      const step = event.altKey ? 10 : 1;
+
+      switch (event.key) {
+        case "ArrowLeft":
+          this.page = this.page - step;
+          break;
+        case "ArrowRight":
+          this.page = this.page + step;
+          break;
+      }
+    };
 
     this.subscribe(pg => {
       const items = [];
@@ -163,7 +185,7 @@ export class Pagination {
 
         if (targetPage < 1 || targetPage > np) {
           a.setAttribute("aria-disabled", "true");
-          a.tabIndex=-1;
+          a.tabIndex = -1;
         } else {
           if (targetPage === this.page) {
             a.classList.add("active");
@@ -204,35 +226,55 @@ export function pageNavigation(elem, pg) {
 }
 
 /**
- * Generade actual sequence of page numbers to navigate to
- * @param {number} nunmberOfPages
+ * Generade actual sequence of page numbers to navigate to.
+ * @param {number} numberOfPages
  * @param {number} currentPage
+ * @param {number} numberOfItems
  * @return {Iterator<number>}
  */
-export function* navigationItems(nunmberOfPages, currentPage) {
+export function* navigationItems(
+  numberOfPages,
+  currentPage,
+  numberOfItems = 7
+) {
+  const edge = 2;
+  const side = 1;
+  const step = numberOfPages >= 100 ? Math.floor(numberOfPages / 10) : undefined;
+
+  for (let n = 1; n <= numberOfPages; n++) {
+    if (
+      n <= edge ||
+      n > numberOfPages - edge ||
+      n % step === 0 ||
+      (n < currentPage + side && n > currentPage - side)
+    ) {
+      yield n;
+    }
+  }
+
+  /*  
   const pageJumps = [
-    { maxPages: 10, side: 1, edge: 2 },
-    { maxPages: 100, side: 1, edge: 2, step: 10 },
-    { maxPages: 1000, side: 1, edge: 2, step: 100 },
-    { maxPages: 10000, side: 1, edge: 2, step: 1000 },
-    { maxPages: 100000, side: 1, edge: 2, step: 10000 },
-    { maxPages: 1000000, side: 1, edge: 2, step: 100000 },
-    { maxPages: 10000000, side: 1, edge: 2, step: 1000000 }
+    { maxPages: 10, stepping: [1] },
+    { maxPages: 100, stepping: [1, 10] },
+    { maxPages: 1000, stepping: [1, 10, 100] },
+    { maxPages: 10000, stepping: [1, 100, 1000] },
+    { maxPages: 100000, stepping: [1, 1000, 10000] }
   ];
 
   for (const j of pageJumps) {
-    if (nunmberOfPages <= j.maxPages) {
-      for (let n = 1; n <= nunmberOfPages; n++) {
-        if (
-          n <= j.edge ||
-          n > nunmberOfPages - j.edge ||
-          n % j.step === 0 ||
-          (n < currentPage + j.side && n > currentPage - j.side)
-        ) {
+    if (numberOfPages <= j.maxPages) {
+      yield 1;
+      for (const s of j.stepping) {
+        for (let n = currentPage - s; n < currentPage + s; n++) {
           yield n;
         }
+        yield currentPage;
       }
+
+      yield numberOfPages;
+
       break;
     }
   }
+  */
 }
