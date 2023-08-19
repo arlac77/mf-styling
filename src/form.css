@@ -36,8 +36,14 @@ input:disabled {
   pointer-events: none;
 }
 
-input:invalid {
+input:user-invalid {
   background-color: var(--color-warn-200-80);
+}
+
+@supports not selector(:user-invalid) {
+  input:invalid {
+    background-color: var(--color-warn-200-80);
+  }
 }
 
 input:optional {
