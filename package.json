@@ -57,7 +57,7 @@
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^11.0.4",
     "autoprefixer": "^10.4.15",
-    "npm-pkgbuild": "^11.10.13",
+    "npm-pkgbuild": "^11.10.15",
     "semantic-release": "^21.1.1",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
