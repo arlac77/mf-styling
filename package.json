@@ -55,7 +55,7 @@
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^10.0.3",
     "@semantic-release/exec": "^6.0.3",
-    "@semantic-release/release-notes-generator": "^11.0.5",
+    "@semantic-release/release-notes-generator": "^11.0.7",
     "autoprefixer": "^10.4.15",
     "npm-pkgbuild": "^12.0.0",
     "semantic-release": "^21.1.1",
