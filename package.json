@@ -56,14 +56,14 @@
     "@semantic-release/commit-analyzer": "^11.0.0",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^12.0.0",
+    "@vite-plugin-compression2": "^0.10.5",
     "autoprefixer": "^10.4.15",
     "npm-pkgbuild": "^12.1.1",
-    "semantic-release": "^22.0.0",
+    "semantic-release": "^22.0.1",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "testcafe": "^3.3.0",
-    "vite": "^4.4.9",
-    "@vite-plugin-compression2": "^0.10.5"
+    "vite": "^4.4.9"
   },
   "optionalDependencies": {
     "mf-hosting-frontend": "^2.2.1"
