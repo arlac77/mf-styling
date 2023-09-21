@@ -58,7 +58,7 @@
     "@semantic-release/release-notes-generator": "^12.0.0",
     "@vite-plugin-compression2": "^0.10.5",
     "autoprefixer": "^10.4.15",
-    "npm-pkgbuild": "^12.1.1",
+    "npm-pkgbuild": "^12.1.2",
     "semantic-release": "^22.0.1",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
