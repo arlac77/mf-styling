@@ -32,7 +32,18 @@ export default defineConfig(async ({ command, mode }) => {
     /*plugins: [
       compression({
         algorithm: "brotliCompress",
-        exclude: [/\.(br)$/, /\.(gz)$/, /\.(png)$/, /\.(jpg)$/],
+        exclude: [
+          /\.(br)$/,
+          /\.(gz)$/,
+          /\.(png)$/,
+          /\.(jpg)$/,
+          /\.(gif)$/,
+          /\.(webp)$/,
+          /\.(heic)$/,
+          /\.(avif)$/,
+          /\.(jxl)$/,
+          /\.(pdf)$/
+        ],
         threshold: 500
       })
     ],*/
