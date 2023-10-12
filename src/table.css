@@ -39,13 +39,14 @@ td {
   inset-block-end: 0;
 }
 
-th > input {
+th input {
   margin: 0.2rem;
   padding: 0.1rem;
   border: 0;
   border-radius: 0;
+  font-size: 0.5rem;
 }
 
-th > input:not(:focus) {
-  font-size: 0.5rem;
+th input:is(:focus) {
+  font-size: 0.8rem;
 }
