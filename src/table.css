@@ -17,6 +17,23 @@ td {
   padding: var(--table-padding);
 }
 
+
+.bordered-light-left {
+  border-left: 1px dotted var(--color-neutral-50);
+}
+
+.bordered-light-right {
+  border-right: 1px dotted var(--color-neutral-50);
+}
+
+.bordered-light-bottom {
+  border-bottom: 1px dotted var(--color-neutral-50);
+}
+
+.bordered-light-top {
+  border-top: 1px dotted var(--color-neutral-50);
+}
+
 .bordered :is(td, th) {
   border: 1px solid var(--color-neutral-300);
 }
