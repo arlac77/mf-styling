@@ -17,25 +17,24 @@ td {
   padding: var(--table-padding);
 }
 
+.bordered :is(td, th) {
+  border: 1px solid var(--color-neutral-300);
+}
 
 .bordered-light-left {
-  border-left: 1px dotted var(--color-neutral-50);
+  border-left: 1px dotted var(--color-neutral-200) !important;
 }
 
 .bordered-light-right {
-  border-right: 1px dotted var(--color-neutral-50);
+  border-right: 1px dotted var(--color-neutral-200) !important;
 }
 
 .bordered-light-bottom {
-  border-bottom: 1px dotted var(--color-neutral-50);
+  border-bottom: 1px dotted var(--color-neutral-200) !important;
 }
 
 .bordered-light-top {
-  border-top: 1px dotted var(--color-neutral-50);
-}
-
-.bordered :is(td, th) {
-  border: 1px solid var(--color-neutral-300);
+  border-top: 1px dotted var(--color-neutral-200) !important;
 }
 
 .striped tr:nth-of-type(odd) {
