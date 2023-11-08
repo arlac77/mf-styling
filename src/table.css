@@ -17,24 +17,24 @@ td {
   padding: var(--table-padding);
 }
 
-.bordered :is(td, th) {
+.bordered :where(td, th) {
   border: 1px solid var(--color-neutral-300);
 }
 
 .bordered-light-left {
-  border-left: 1px dotted var(--color-neutral-200) !important;
+  border-left: 1px dotted var(--color-neutral-200);
 }
 
 .bordered-light-right {
-  border-right: 1px dotted var(--color-neutral-200) !important;
+  border-right: 1px dotted var(--color-neutral-200);
 }
 
 .bordered-light-bottom {
-  border-bottom: 1px dotted var(--color-neutral-200) !important;
+  border-bottom: 1px dotted var(--color-neutral-200);
 }
 
 .bordered-light-top {
-  border-top: 1px dotted var(--color-neutral-200) !important;
+  border-top: 1px dotted var(--color-neutral-200);
 }
 
 .striped tr:nth-of-type(odd) {
