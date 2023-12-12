@@ -58,11 +58,11 @@
     "@semantic-release/release-notes-generator": "^12.1.0",
     "autoprefixer": "^10.4.15",
     "npm-pkgbuild": "^13.0.8",
-    "semantic-release": "^22.0.10",
-    "stylelint": "^16.0.1",
+    "semantic-release": "^22.0.12",
+    "stylelint": "^16.0.2",
     "stylelint-config-standard": "^35.0.0",
     "testcafe": "^3.4.0",
-    "vite": "^5.0.7",
+    "vite": "^5.0.8",
     "vite-plugin-compression2": "^0.11.0"
   },
   "optionalDependencies": {
