@@ -1,20 +1,35 @@
 name: Lighthouse CI
-on: push
+'on':
+  push:
+    branches:
+      - master
+      - next
+  pull_request:
+    branches:
+      - master
+      - next
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Generate URLs
+        id: urls
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const globber = await glob.create('tests/app/*.html');
+            const files = await globber.glob();
+            const urls = files
+              .map(x => x.match(/([\w-]+)/)[1])
+              .map(x => `https://mfelten.dynv6.net/examples/mf-styling/${x}`)
+              .join('\n');
+            core.setOutput('urls', urls);
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v11
         with:
           urls: |
-            https://mfelten.dynv6.net/examples/mf-styling/index.html
-            https://mfelten.dynv6.net/examples/mf-styling/color.html
-            https://mfelten.dynv6.net/examples/mf-styling/card.html
-            https://mfelten.dynv6.net/examples/mf-styling/table.html
-            https://mfelten.dynv6.net/examples/mf-styling/form.html
-            https://mfelten.dynv6.net/examples/mf-styling/modal.html
-            https://mfelten.dynv6.net/examples/mf-styling/topnav.html
-          uploadArtifacts: true # save results as an action artifacts
-          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+            ${{ steps.urls.outputs.urls }}
+          uploadArtifacts: true
+          temporaryPublicStorage: true
