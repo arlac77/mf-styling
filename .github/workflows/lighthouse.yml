@@ -22,7 +22,7 @@ jobs:
             const globber = await glob.create('tests/app/*.html');
             const files = await globber.glob();
             const urls = files
-              .map(x => x.match(/([\w-]+)/)[1])
+              .map(x => x.match(/([\w-]+)\.html$/)[1])
               .map(x => `https://mfelten.dynv6.net/examples/mf-styling/${x}`)
               .join('\n');
             core.setOutput('urls', urls);
