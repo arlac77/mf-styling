@@ -8,6 +8,10 @@ on:
     branches:
       - master
       - next
+
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
@@ -49,6 +53,11 @@ jobs:
     needs:
       - test
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
     steps:
       - name: Dependencies
         run: >
@@ -73,10 +82,3 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PKGEXT: .pkg.tar.xz
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
-      id-token: write
-permissions:
-  contents: read
