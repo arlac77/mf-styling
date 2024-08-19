@@ -12,7 +12,8 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.7
+      - name: checkout
+        uses: actions/checkout@v4.1.7
       - name: Generate URLs
         id: urls
         uses: actions/github-script@v7
