@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4.1.7
-      - name: Build / Test Node ${{ matrix.node-version }}
+      - prepare node
         uses: actions/setup-node@v4.0.3
         with:
           node-version: ${{ matrix.node-version }}
