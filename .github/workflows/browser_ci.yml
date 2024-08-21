@@ -31,6 +31,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
+          cache-dependency-path: package-lock.json
       - uses: browser-actions/setup-chrome@latest
         with:
           chrome-version: ${{ matrix.chrome }}
@@ -43,6 +44,17 @@ jobs:
         env:
           BROWSER: ${{ matrix.browser }}
       - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ matrix.browser }}
+          path: ${{ github.workspace }}/build/test/**/*
+          retention-days: 3
+        if: always()
+      - name: npm install
+        run: npm cit
+        env:
+          BROWSER: ${{ matrix.browser }}
+      - name: upload artifacts
+        uses: actions/upload-artifact@v4
         with:
           name: screenshots-${{ matrix.browser }}
           path: ${{ github.workspace }}/build/test/**/*
@@ -82,6 +94,8 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
+      - name: install
+        run: npm ci
       - name: release
         run: npx semantic-release
         env:
@@ -90,3 +104,9 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PKGEXT: .pkg.tar.xz
+      - name: prepare node
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 22.6.0
+          cache: npm
+          cache-dependency-path: package-lock.json
