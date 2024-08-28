@@ -79,6 +79,12 @@ jobs:
           node-version: 22.7.0
           cache: npm
           cache-dependency-path: package-lock.json
+      - name: prepare node
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 22.7.0
+          cache: npm
+          cache-dependency-path: package-lock.json
       - name: install
         run: npm ci
       - name: release
