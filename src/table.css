@@ -21,6 +21,22 @@ td {
   border: 1px solid var(--color-neutral-300);
 }
 
+.bordered-none-left {
+  border-left: 0;
+}
+
+.bordered-none-right {
+  border-right: 0;
+}
+
+.bordered-none-bottom {
+  border-bottom: 0;
+}
+
+.bordered-none-top {
+  border-top: 0;
+}
+
 .bordered-light-left {
   border-left: 1px dotted var(--color-neutral-200);
 }
