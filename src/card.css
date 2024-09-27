@@ -31,12 +31,6 @@
   cursor: pointer;
 }
 
-.card.small,
-.card.medium,
-.card.large {
-  position: relative;
-}
-
 .card.small {
   height: 300px;
 }
