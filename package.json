@@ -49,7 +49,7 @@
     "start": "vite",
     "test": "node --run test:cafe",
     "test:cafe": "testcafe $BROWSER:headless tests/cafe/*-cafe.mjs --esm -s build/test --page-request-timeout 5000 --app-init-delay 8000 --app vite",
-    "lint:css": "stylelint ./src/*.css",
+    "lint:css": "stylelint ./src**/*.css",
     "lint": "node --run lint:css",
     "preview": "vite preview"
   },
