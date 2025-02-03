@@ -58,7 +58,7 @@ td {
 }
 
 .hoverable tr:hover {
-  background-color: var(--color-accent-100);
+  background: var(--color-accent-100);
 }
 
 .sticky thead {
