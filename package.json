@@ -59,12 +59,12 @@
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/github": "^11.0.6",
     "@semantic-release/release-notes-generator": "^14.1.0",
-    "npm-pkgbuild": "^18.3.3",
+    "npm-pkgbuild": "^18.3.6",
     "semantic-release": "^24.2.9",
     "stylelint": "^16.24.0",
     "stylelint-config-standard": "^39.0.0",
     "testcafe": "^3.7.2",
-    "vite": "^7.1.5",
+    "vite": "^7.1.7",
     "vite-plugin-compression2": "^2.2.1"
   },
   "optionalDependencies": {
