@@ -17,6 +17,7 @@ jobs:
     strategy:
       matrix:
         node-version:
+          - 22.21.0
           - 24.10.0
         os:
           - ubuntu-latest
@@ -83,3 +84,4 @@ jobs:
           PKGBUILD_PUBLISH: ${{ secrets.PKGBUILD_PUBLISH }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PKGEXT: .pkg.tar.xz
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
