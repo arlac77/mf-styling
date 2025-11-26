@@ -77,7 +77,7 @@
   "bugs": {
     "url": "https://github.com/arlac77/mf-styling/issues"
   },
-  "homepage": "https://github.com/arlac77/mf-styling#readme",
+  "homepage": "",
   "pkgbuild": {
     "content": {
       "${install.dir}": {
