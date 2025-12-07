@@ -39,6 +39,13 @@ jobs:
           path: ${{ github.workspace }}/playwright-report/**/*
           retention-days: 30
         if: ${{ !cancelled() }}
+      - name: upload test result
+        uses: actions/upload-artifact@v5
+        with:
+          name: test-result
+          path: ${{ github.workspace }}/test-result/**/*
+          retention-days: 30
+        if: ${{ !cancelled() }}
   release:
     needs:
       - test-node
