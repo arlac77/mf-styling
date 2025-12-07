@@ -14,6 +14,7 @@ permissions:
 jobs:
   test-node:
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
     strategy:
       matrix:
         node-version:
@@ -45,6 +46,15 @@ jobs:
           path: ${{ github.workspace }}/build/test/**/*
           retention-days: 3
         if: always()
+      - name: install playwright
+        run: npx playwright install --with-deps
+      - name: upload test report
+        uses: actions/upload-artifact@v5
+        with:
+          name: test-report
+          path: ${{ github.workspace }}/playwright-report/**/*
+          retention-days: 30
+        if: ${{ !cancelled() }}
   release:
     needs:
       - test-node
