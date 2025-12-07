@@ -5,7 +5,14 @@ doc
 *.tmp
 .vscode
 .github
+playwright.config.js
 pkg
 *.map
 .stylelintrc.json
 dist
+.last-run.json
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
