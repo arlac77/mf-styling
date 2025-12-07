@@ -21,10 +21,6 @@ jobs:
           - 24.11.1
         os:
           - ubuntu-latest
-        browser:
-          - chrome
-        chrome:
-          - stable
     steps:
       - name: checkout
         uses: actions/checkout@v6.0.1
@@ -32,22 +28,10 @@ jobs:
         uses: actions/setup-node@v6.1.0
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: browser-actions/setup-chrome@latest
-        with:
-          chrome-version: ${{ matrix.chrome }}
-      - name: npm install
-        run: npm cit
-        env:
-          BROWSER: ${{ matrix.browser }}
-      - name: upload artifacts
-        uses: actions/upload-artifact@v5
-        with:
-          name: screenshots-${{ matrix.browser }}
-          path: ${{ github.workspace }}/build/test/**/*
-          retention-days: 3
-        if: always()
       - name: install playwright
         run: npx playwright install --with-deps
+      - name: npm install
+        run: npm cit
       - name: upload test report
         uses: actions/upload-artifact@v5
         with:
