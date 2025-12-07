@@ -48,8 +48,6 @@
     "prepare": "node --run prepare:vite",
     "prepare:vite": "vite build",
     "start": "vite",
-    "test": "node --run test:cafe",
-    "test:cafe": "testcafe $BROWSER:headless tests/cafe/*-cafe.mjs --esm -s build/test --page-request-timeout 5000 --app-init-delay 8000 --app vite",
     "lint:css": "stylelint ./src**/*.css",
     "lint": "node --run lint:css",
     "preview": "vite preview"
@@ -63,7 +61,6 @@
     "semantic-release": "^25.0.2",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.1",
-    "testcafe": "^3.7.2",
     "vite": "^7.2.6",
     "vite-plugin-compression2": "^2.4.0"
   },
@@ -96,12 +93,6 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/npm",
-      [
-        "@semantic-release/exec",
-        {
-          "publishCmd": "npx npm-pkgbuild --verbose --publish dist"
-        }
-      ],
       [
         "@semantic-release/exec",
         {
@@ -149,7 +140,7 @@
     "inheritFrom": [
       "arlac77/template-css",
       "arlac77/template-npm-pkgbuild",
-      "arlac77/template-testcafe",
+      "arlac77/template-playwright",
       "arlac77/template-vite",
       "arlac77/template-web-app"
     ]
