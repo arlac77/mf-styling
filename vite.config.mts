@@ -29,7 +29,7 @@ export default defineConfig(async ({ command, mode }) => {
     publicDir: "../../src",
     base,
     root: "tests/app",
-    /*plugins: [
+    plugins: [
       compression({
         algorithms: ["brotliCompress"],
         exclude: [
@@ -48,7 +48,7 @@ export default defineConfig(async ({ command, mode }) => {
         ],
         threshold: 500
       })
-    ],*/
+    ],
     build: {
       rollupOptions: {
         input: {
