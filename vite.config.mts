@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import { resolve } from "node:path";
-import { readdir } from "node:fs/promises";
+import { glob } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import { compression } from "vite-plugin-compression2";
 import { extractFromPackage } from "npm-pkgbuild";
 
@@ -21,9 +21,13 @@ export default defineConfig(async ({ command, mode }) => {
   process.env["VITE_DESCRIPTION"] = properties.description;
   process.env["VITE_VERSION"] = properties.version;
 
-  const entries = (
-    await readdir(new URL("./tests/app", import.meta.url).pathname)
-  ).filter(n => n.match(/.html/));
+  let input = {};
+
+  for await (const app of glob(
+    fileURLToPath(new URL("./tests/app/*.html", import.meta.url))
+  )) {
+    input[app.match(/app\/(.*)\.html/)[1]] = app;
+  }
 
   return {
     publicDir: "../../src",
@@ -51,13 +55,8 @@ export default defineConfig(async ({ command, mode }) => {
     ],
     build: {
       rollupOptions: {
-        input: {
-          ...Object.fromEntries(
-            entries.map(e => [e, resolve(__dirname, `tests/app/${e}`)])
-          )
-        }
+        input
       },
-
       outDir: "../../build",
       target: "esnext",
       emptyOutDir: true,
