@@ -70,14 +70,14 @@ button + .failed {
 
   opacity: 1;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   border: var(--border) solid var(--color-neutral-100);
   border-top: var(--border) solid var(--color-accent-600);
   border-radius: 100%;
   height: var(--size);
   width: var(--size);
   animation: spin 2s linear infinite;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 var(--border);
   padding: var(--size);
   transition: all var(--transition-time) ease;
 }
