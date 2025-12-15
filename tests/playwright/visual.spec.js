@@ -2,7 +2,7 @@
 import { test, expect } from "@playwright/test";
 
 test("tables", async ({ page }) => {
-  await page.goto("http://localhost:5173/");
+  await page.goto("http://localhost:5173/tests/app/");
 
   await page.getByRole("link", { name: "Tables" }).click();
 

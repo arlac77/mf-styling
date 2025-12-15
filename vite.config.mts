@@ -26,13 +26,12 @@ export default defineConfig(async ({ command, mode }) => {
   for await (const app of glob(
     fileURLToPath(new URL("./tests/app/*.html", import.meta.url))
   )) {
-    input[app.match(/app\/(.*)\.html/)[1]] = app;
+    input['tests/app/' + app.match(/app\/(.*)\.html/)[1]] = app;
   }
 
+ // console.log(input);
+  
   return {
-    publicDir: "../../src",
-    base,
-    root: "tests/app",
     plugins: [
       compression({
         algorithms: ["brotliCompress"],
@@ -57,7 +56,7 @@ export default defineConfig(async ({ command, mode }) => {
       rollupOptions: {
         input
       },
-      outDir: "../../build",
+      outDir: "build",
       target: "esnext",
       emptyOutDir: true,
       minify: true,

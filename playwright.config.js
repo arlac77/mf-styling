@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
 
-const BASE="http://localhost:5173/";
+const BASE="http://localhost:5173/tests/app/";
 
 export default defineConfig({
   testDir: "./tests/playwright",
