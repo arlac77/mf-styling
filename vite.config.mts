@@ -32,6 +32,7 @@ export default defineConfig(async ({ command, mode }) => {
  // console.log(input);
   
   return {
+    base,
     plugins: [
       compression({
         algorithms: ["brotliCompress"],
