@@ -26,11 +26,11 @@ export default defineConfig(async ({ command, mode }) => {
   for await (const app of glob(
     fileURLToPath(new URL("./tests/app/*.html", import.meta.url))
   )) {
-    input['tests/app/' + app.match(/app\/(.*)\.html/)[1]] = app;
+    input["tests/app/" + app.match(/app\/(.*)\.html/)[1]] = app;
   }
 
- // console.log(input);
-  
+  // console.log(input);
+
   return {
     base,
     plugins: [
