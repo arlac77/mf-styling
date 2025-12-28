@@ -16,6 +16,7 @@
     "src/color.css",
     "src/dropdown.css",
     "src/form.css",
+    "src/dialog.css",
     "src/global.css",
     "src/images/down.svg",
     "src/images/sort-ascending.svg",
