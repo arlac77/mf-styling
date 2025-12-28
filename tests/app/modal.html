@@ -25,7 +25,7 @@
     <main>
       <div class="modal center">
         <dialog id="modal" class="window" open>
-          <form>
+          <form method="dialog">
             <fieldset>
               <label>
                 Username 1
@@ -38,6 +38,7 @@
                   required
                   value="XXX"
                   size="10"
+                  minlength="2"
                 />
               </label>
               <label>
@@ -49,6 +50,7 @@
                   name="password"
                   size="10"
                   required
+                  minlength="4"
                 />
               </label>
             </fieldset>
