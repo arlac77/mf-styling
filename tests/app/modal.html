@@ -18,13 +18,16 @@
     <link rel="stylesheet" href="../../src/main-nav.css" />
     <link rel="stylesheet" href="../../src/button.css" />
     <link rel="stylesheet" href="../../src/form.css" />
+    <link rel="stylesheet" href="../../src/dialog.css" />
     <link rel="stylesheet" href="../../src/layout.css" />
   </head>
 
   <body>
     <main>
+      <button id="open">Open Login</button>
+
       <div class="modal center">
-        <dialog id="modal" class="window" open>
+        <dialog id="dialog" class="window push-z" closedby="any">
           <form method="dialog">
             <fieldset>
               <label>
@@ -79,9 +82,16 @@
   </body>
 
   <script>
+    document.getElementById("open").addEventListener("click", event => {
+      event.preventDefault();
+      const dialog = document.getElementById("dialog");
+      dialog.showModal();
+    });
+
     document.getElementById("confirm").addEventListener("click", event => {
       event.preventDefault();
-      document.getElementById("modal").close();
+      const dialog = document.getElementById("dialog");
+      dialog.close();
     });
   </script>
 </html>
