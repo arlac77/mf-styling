@@ -82,7 +82,7 @@
   "homepage": "https://github.com/arlac77/mf-styling#readme",
   "pkgbuild": {
     "content": {
-      "${install.dir}": {
+      "${install_dir}": {
         "base": "build/"
       }
     },
