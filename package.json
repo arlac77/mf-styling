@@ -83,7 +83,7 @@
   "pkgbuild": {
     "content": {
       "${install_dir}": {
-        "base": "build/"
+        "dir": "build/"
       }
     },
     "example": true,
