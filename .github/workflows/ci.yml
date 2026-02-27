@@ -33,14 +33,14 @@ jobs:
       - name: install npm
         run: npm cit
       - name: upload test report
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: test-report
           path: ${{ github.workspace }}/playwright-report/**/*
           retention-days: 30
         if: ${{ !cancelled() }}
       - name: upload test result
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: test-result
           path: ${{ github.workspace }}/test-result/**/*
